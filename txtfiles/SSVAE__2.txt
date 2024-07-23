@@ -1,0 +1,107 @@
+Temps d'exécution 188.2841341495514
+----------------------------------------
+failure 0.00096 with dimension 2, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.50381 2.14879 2.6632  3.09972 3.49582 3.85377]
+Le taux d'aceptation en moyenne pour chaque evenement [0.25406 0.20738 0.39028 0.06768 0.05194]
+Etape 0 terminée
+Estimation Pf par VAESS : 0.00096474609375
+Variance de l'estimateur VAESS : 0.0
+Le c.o.v 0.0
+Temps d'exécution 186.07647156715393
+----------------------------------------
+failure 0.00087 with dimension 2, pseudo_inputs 35, noyau de 200 et nombre d'appel 210000
+[1.49902 2.13753 2.6493  3.08267 3.46875 3.81975]
+Le taux d'aceptation en moyenne pour chaque evenement [0.25858 0.14536 0.39708 0.0689  0.05372]
+Etape 0 terminée
+----------------------------------------
+failure 0.00086 with dimension 2, pseudo_inputs 35, noyau de 200 et nombre d'appel 210000
+[1.49527 2.13379 2.63998 3.08679 3.46592 3.82444]
+Le taux d'aceptation en moyenne pour chaque evenement [0.30506 0.2023  0.0983  0.1213  0.34974]
+Etape 1 terminée
+Estimation Pf par VAESS : 0.000866845703125
+Variance de l'estimateur VAESS : 2.09960937500004e-06
+Le c.o.v 0.0024221258378866
+Temps d'exécution 181.09911799430847
+----------------------------------------
+failure 0.00089 with dimension 2, pseudo_inputs 35, noyau de 800 et nombre d'appel 210000
+[1.49663 2.14603 2.65826 3.08576 3.47401 3.83309]
+Le taux d'aceptation en moyenne pour chaque evenement [0.47884 0.14384 0.40766 0.38752 0.09774]
+Etape 0 terminée
+----------------------------------------
+failure 0.00089 with dimension 2, pseudo_inputs 35, noyau de 800 et nombre d'appel 210000
+[1.5109  2.15004 2.65807 3.09685 3.47324 3.82677]
+Le taux d'aceptation en moyenne pour chaque evenement [0.2519  0.14482 0.09518 0.21764 0.34738]
+Etape 1 terminée
+Estimation Pf par VAESS : 0.00088603515625
+Variance de l'estimateur VAESS : 8.789062500000116e-07
+Le c.o.v 0.0009919541496748725
+Temps d'exécution 186.93231177330017
+----------------------------------------
+failure 0.00092 with dimension 2, pseudo_inputs 35, noyau de 800 et nombre d'appel 210000
+[1.49822 2.14403 2.65758 3.0937  3.48412 3.83969]
+Le taux d'aceptation en moyenne pour chaque evenement [0.30326 0.43362 0.09446 0.07168 0.05394]
+Etape 0 terminée
+----------------------------------------
+failure 0.00092 with dimension 2, pseudo_inputs 35, noyau de 800 et nombre d'appel 210000
+[1.49325 2.15148 2.65059 3.098   3.48431 3.8223 ]
+Le taux d'aceptation en moyenne pour chaque evenement [0.45462 0.14202 0.43022 0.36782 0.09518]
+Etape 1 terminée
+Estimation Pf par VAESS : 0.000920263671875
+Variance de l'estimateur VAESS : 2.197265624999975e-06
+Le c.o.v 0.0023876479015227615
+Temps d'exécution 186.73307371139526
+----------------------------------------
+failure 0.00098 with dimension 2, pseudo_inputs 35, noyau de 800 et nombre d'appel 210000
+[1.50265 2.13942 2.66161 3.10726 3.49995 3.85111]
+Le taux d'aceptation en moyenne pour chaque evenement [0.25982 0.21488 0.40044 0.12158 0.19598]
+Etape 0 terminée
+----------------------------------------
+failure 0.00083 with dimension 2, pseudo_inputs 35, noyau de 800 et nombre d'appel 210000
+[1.48772 2.14139 2.64096 3.07796 3.46056 3.80256]
+Le taux d'aceptation en moyenne pour chaque evenement [0.25632 0.42994 0.4324  0.4325  0.09634]
+Etape 1 terminée
+Estimation Pf par VAESS : 0.00090322265625
+Variance de l'estimateur VAESS : 7.324218750000001e-05
+Le c.o.v 0.08108984755108661
+Temps d'exécution 185.32405304908752
+----------------------------------------
+failure 0.00084 with dimension 2, pseudo_inputs 35, noyau de 800 et nombre d'appel 210000
+[1.48678 2.12932 2.63671 3.06049 3.45568 3.81136]
+Le taux d'aceptation en moyenne pour chaque evenement [0.26218 0.42932 0.14926 0.07054 0.367  ]
+Etape 0 terminée
+----------------------------------------
+failure 0.00089 with dimension 2, pseudo_inputs 35, noyau de 800 et nombre d'appel 210000
+[1.49427 2.14707 2.6506  3.09123 3.47487 3.82407]
+Le taux d'aceptation en moyenne pour chaque evenement [0.32096 0.20642 0.42184 0.39102 0.41302]
+Etape 1 terminée
+Estimation Pf par VAESS : 0.0008615234375
+Variance de l'estimateur VAESS : 2.578124999999998e-05
+Le c.o.v 0.02992518703241893
+Temps d'exécution 194.48961901664734
+----------------------------------------
+failure 0.00095 with dimension 2, pseudo_inputs 35, noyau de 800 et nombre d'appel 210000
+[1.50685 2.15254 2.6533  3.09192 3.49282 3.84654]
+Le taux d'aceptation en moyenne pour chaque evenement [0.46156 0.19828 0.15516 0.06724 0.4252 ]
+Etape 0 terminée
+----------------------------------------
+failure 0.00089 with dimension 2, pseudo_inputs 35, noyau de 800 et nombre d'appel 210000
+[1.50086 2.14876 2.64997 3.08558 3.4772  3.83071]
+Le taux d'aceptation en moyenne pour chaque evenement [0.29902 0.14502 0.40744 0.2236  0.36752]
+Etape 1 terminée
+Estimation Pf par VAESS : 0.0009193359375
+Variance de l'estimateur VAESS : 3.212890625000004e-05
+Le c.o.v 0.034947949861907836
+Temps d'exécution 395.63693165779114
+----------------------------------------
+failure 0.00088 with dimension 2, pseudo_inputs 35, noyau de 800 et nombre d'appel 210000
+[1.50647 2.15016 2.67052 3.09668 3.47315 3.82382]
+Le taux d'aceptation en moyenne pour chaque evenement [0.3217  0.39126 0.40968 0.11664 0.09926]
+Etape 0 terminée
+----------------------------------------
+failure 0.00092 with dimension 2, pseudo_inputs 35, noyau de 800 et nombre d'appel 210000
+[1.5019  2.14404 2.64829 3.09811 3.48518 3.83131]
+Le taux d'aceptation en moyenne pour chaque evenement [0.40912 0.14584 0.40642 0.06832 0.1005 ]
+Etape 1 terminée
+Estimation Pf par VAESS : 0.000898779296875
+Variance de l'estimateur VAESS : 2.1240234375000046e-05
+Le c.o.v 0.023632313793665503

@@ -1,0 +1,495 @@
+Temps d'exécution 180.0508680343628
+----------------------------------------
+failure 0.00093 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 0 terminée
+----------------------------------------
+failure 0.00092 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 1 terminée
+----------------------------------------
+failure 0.00095 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 2 terminée
+----------------------------------------
+failure 0.00095 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 3 terminée
+----------------------------------------
+failure 0.00091 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 4 terminée
+----------------------------------------
+failure 0.00099 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+Etape 5 terminée
+----------------------------------------
+failure 0.00098 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 6 terminée
+----------------------------------------
+failure 0.00095 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 7 terminée
+----------------------------------------
+failure 0.00094 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 8 terminée
+----------------------------------------
+failure 0.00093 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 9 terminée
+----------------------------------------
+failure 0.00095 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 10 terminée
+----------------------------------------
+failure 0.00099 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+Etape 11 terminée
+----------------------------------------
+failure 0.00095 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 12 terminée
+----------------------------------------
+failure 0.00095 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 13 terminée
+----------------------------------------
+failure 0.00097 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 14 terminée
+----------------------------------------
+failure 0.00098 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 15 terminée
+----------------------------------------
+failure 0.00097 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 16 terminée
+----------------------------------------
+failure 0.00096 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 17 terminée
+----------------------------------------
+failure 0.00093 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 18 terminée
+----------------------------------------
+failure 0.00096 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 19 terminée
+----------------------------------------
+failure 0.00097 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 20 terminée
+----------------------------------------
+failure 0.00095 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 21 terminée
+----------------------------------------
+failure 0.00096 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 22 terminée
+----------------------------------------
+failure 0.00095 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 23 terminée
+----------------------------------------
+failure 0.0009 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+Etape 24 terminée
+Estimation Pf par VAESS : 0.0009514609375
+Variance de l'estimateur VAESS : 2.240392696835793e-05
+Le c.o.v 0.02354686996107807
+Temps d'exécution 135.96611046791077
+----------------------------------------
+failure 0.001 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.51    2.15665 2.67019 3.10658 3.50702]
+[0.3031  0.24294 0.20934 0.19572]
+----------------------------------------
+failure 0.00096 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.47757 2.13937 2.67017 3.10569 3.49657 3.85473]
+[0.31832 0.25032 0.20932 0.17344 0.17016]
+----------------------------------------
+failure 0.00096 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48522 2.13427 2.65704 3.10208 3.49713 3.83961]
+[0.30726 0.24432 0.20666 0.18782 0.07324]
+----------------------------------------
+failure 0.0009 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48989 2.12451 2.62494 3.0713  3.47589 3.84252]
+[0.31132 0.2383  0.21066 0.18744 0.17686]
+----------------------------------------
+failure 0.00092 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48927 2.1325  2.64301 3.08826 3.48578 3.84872]
+[0.30168 0.2392  0.2103  0.19282 0.17252]
+----------------------------------------
+failure 0.00107 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.49857 2.16235 2.6765  3.12539 3.52489]
+[0.31136 0.24136 0.20746 0.18664]
+----------------------------------------
+failure 0.00096 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.50618 2.14689 2.66286 3.10563 3.49489 3.8487 ]
+[0.3044  0.2449  0.20904 0.18368 0.1737 ]
+----------------------------------------
+failure 0.00098 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.50539 2.15855 2.67634 3.11235 3.50077]
+[0.31116 0.24266 0.20362 0.18194]
+----------------------------------------
+failure 0.00098 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.49076 2.14632 2.67675 3.11605 3.50132]
+[0.31204 0.24624 0.2141  0.18878]
+----------------------------------------
+failure 0.00096 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.49252 2.14456 2.66019 3.08771 3.49666 3.84503]
+[0.30438 0.24054 0.20614 0.11256 0.16878]
+----------------------------------------
+failure 0.00099 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.47337 2.15187 2.65599 3.10932 3.50182]
+[0.20902 0.24274 0.21624 0.1846 ]
+----------------------------------------
+failure 0.00092 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.50466 2.15961 2.67092 3.10847 3.48646 3.84045]
+[0.30728 0.24622 0.20758 0.09214 0.16404]
+----------------------------------------
+failure 0.00093 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.50234 2.16144 2.66663 3.10869 3.48656 3.85136]
+[0.31326 0.20022 0.2063  0.17694 0.17776]
+----------------------------------------
+failure 0.00093 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.49164 2.13451 2.65074 3.08799 3.48584 3.85397]
+[0.30646 0.24084 0.20782 0.17858 0.17156]
+----------------------------------------
+failure 0.00094 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.49127 2.14876 2.66288 3.10296 3.48998 3.83932]
+[0.31172 0.24492 0.20498 0.18452 0.16192]
+----------------------------------------
+failure 0.00088 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48245 2.13424 2.64729 3.09026 3.471   3.82519]
+[0.30936 0.2358  0.2096  0.16834 0.17042]
+----------------------------------------
+failure 0.00099 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.49726 2.1382  2.65937 3.11074 3.50275]
+[0.3052  0.24134 0.21342 0.18892]
+----------------------------------------
+failure 0.00098 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.49609 2.14478 2.67314 3.11216 3.50188]
+[0.31094 0.24846 0.21086 0.1872 ]
+----------------------------------------
+failure 0.00092 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.49169 2.13756 2.65061 3.0959  3.48426 3.8415 ]
+[0.2968  0.23842 0.20954 0.18362 0.16714]
+----------------------------------------
+failure 0.00089 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.49191 2.13889 2.65081 3.08165 3.47558 3.83431]
+[0.31124 0.23792 0.206   0.17458 0.17008]
+----------------------------------------
+failure 0.00094 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48507 2.14613 2.65493 3.10085 3.49146 3.84455]
+[0.31594 0.23718 0.2073  0.18052 0.17006]
+----------------------------------------
+failure 0.00098 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.4981  2.14873 2.66845 3.10487 3.50207]
+[0.31148 0.24268 0.19908 0.18904]
+----------------------------------------
+failure 0.00101 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.48686 2.15757 2.67247 3.11373 3.50922]
+[0.31164 0.24564 0.20928 0.18062]
+----------------------------------------
+failure 0.00099 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.50253 2.16295 2.67997 3.1167  3.50595]
+[0.30746 0.23148 0.19954 0.1771 ]
+----------------------------------------
+failure 0.00101 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.50142 2.15547 2.6675  3.11696 3.51074]
+[0.3088  0.24408 0.20792 0.17782]
+Estimation Pf par VAESS : 0.00096036328125
+Variance de l'estimateur VAESS : 4.2816120256377676e-05
+Le c.o.v 0.04458325416257961
+Temps d'exécution 146.92214560508728
+----------------------------------------
+failure 0.001 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.50226 2.14898 2.66749 3.10861 3.5045 ]
+[0.30716 0.25124 0.20466 0.1873 ]
+----------------------------------------
+failure 0.00099 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.50372 2.14061 2.65885 3.10016 3.50261]
+[0.30268 0.24592 0.21378 0.18856]
+----------------------------------------
+failure 0.00109 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.50349 2.16983 2.68697 3.12714 3.52841]
+[0.3114  0.24646 0.20978 0.19072]
+----------------------------------------
+failure 0.00092 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.47136 2.11961 2.6461  3.09409 3.48385 3.84441]
+[0.30956 0.24246 0.2071  0.18574 0.17284]
+----------------------------------------
+failure 0.00097 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.5047  2.16093 2.66647 3.10434 3.49811 3.85145]
+[0.29496 0.23702 0.21424 0.19064 0.1731 ]
+----------------------------------------
+failure 0.00099 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.48244 2.148   2.66175 3.11389 3.50433]
+[0.31008 0.2471  0.21246 0.1825 ]
+----------------------------------------
+failure 0.00099 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.50224 2.16389 2.66895 3.10844 3.50357]
+[0.31094 0.24508 0.21016 0.18528]
+----------------------------------------
+failure 0.00096 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.49628 2.14012 2.64991 3.09488 3.49712 3.85694]
+[0.3046  0.2447  0.2056  0.18022 0.17736]
+----------------------------------------
+failure 0.00104 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.50404 2.16849 2.6793  3.12064 3.51689]
+[0.32386 0.2471  0.21198 0.1885 ]
+----------------------------------------
+failure 0.00095 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.49577 2.14155 2.65944 3.10049 3.49201 3.84405]
+[0.3088  0.2421  0.20378 0.1856  0.17142]
+----------------------------------------
+failure 0.00098 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.49365 2.13643 2.65065 3.10482 3.50176]
+[0.30694 0.24436 0.20868 0.18578]
+----------------------------------------
+failure 0.00093 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.49145 2.13205 2.66293 3.09636 3.48648 3.84179]
+[0.25946 0.23942 0.21088 0.18364 0.16642]
+----------------------------------------
+failure 0.00094 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48868 2.14151 2.6516  3.08655 3.49059 3.84263]
+[0.20592 0.24562 0.21198 0.18918 0.167  ]
+----------------------------------------
+failure 0.00096 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.49659 2.14216 2.66033 3.1025  3.49618 3.85674]
+[0.30958 0.23576 0.1248  0.187   0.17322]
+----------------------------------------
+failure 0.00095 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.49405 2.13839 2.66099 3.10447 3.49245 3.84966]
+[0.30916 0.23814 0.2204  0.18076 0.16192]
+----------------------------------------
+failure 0.00085 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.47097 2.11247 2.63895 3.07913 3.46246 3.8212 ]
+[0.3132  0.24182 0.21158 0.18248 0.17032]
+----------------------------------------
+failure 0.00096 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48529 2.13923 2.65422 3.10359 3.49415 3.8522 ]
+[0.30754 0.239   0.20884 0.19464 0.0731 ]
+----------------------------------------
+failure 0.00097 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.49053 2.15835 2.67506 3.10895 3.49734 3.85646]
+[0.3178  0.24372 0.21582 0.18384 0.17304]
+----------------------------------------
+failure 0.001 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.50655 2.15439 2.6695  3.11498 3.50323]
+[0.3049  0.2423  0.21936 0.18216]
+----------------------------------------
+failure 0.00095 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.50436 2.1655  2.6736  3.10923 3.49247 3.85011]
+[0.30656 0.24842 0.20658 0.1832  0.17148]
+----------------------------------------
+failure 0.00096 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.50182 2.15798 2.66084 3.09854 3.49434 3.85484]
+[0.31088 0.24022 0.21512 0.09582 0.16484]
+----------------------------------------
+failure 0.00094 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48893 2.13359 2.65313 3.09657 3.48771 3.84543]
+[0.3159  0.24066 0.2029  0.18434 0.17002]
+----------------------------------------
+failure 0.00101 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.4792  2.13894 2.65538 3.10034 3.50982]
+[0.30688 0.24872 0.20902 0.18442]
+----------------------------------------
+failure 0.00091 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48518 2.13601 2.64562 3.0819  3.48194 3.83628]
+[0.30986 0.24106 0.21158 0.1853  0.16844]
+----------------------------------------
+failure 0.00096 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.49738 2.1403  2.66206 3.09834 3.4937  3.85625]
+[0.30776 0.24954 0.20708 0.18118 0.1648 ]
+Estimation Pf par VAESS : 0.0009656171875
+Variance de l'estimateur VAESS : 4.479108780361178e-05
+Le c.o.v 0.0463859678384316
+Temps d'exécution 176.38565969467163
+----------------------------------------
+failure 0.00098 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.50297 2.15009 2.66332 3.11244 3.49985 3.85975]
+[0.30484 0.24578 0.20976 0.1788  0.1685 ]
+----------------------------------------
+failure 0.00091 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.47814 2.13378 2.64679 3.08756 3.48318 3.83272]
+[0.3083  0.24722 0.20132 0.18484 0.16128]
+----------------------------------------
+failure 0.00096 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.50988 2.16291 2.66587 3.10279 3.49616 3.84754]
+[0.30822 0.24144 0.21518 0.18246 0.16368]
+----------------------------------------
+failure 0.00109 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.49861 2.16305 2.68443 3.13428 3.5314 ]
+[0.30932 0.2535  0.21004 0.18978]
+----------------------------------------
+failure 0.00103 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.49519 2.15243 2.68338 3.11743 3.51355]
+[0.30938 0.2473  0.206   0.19322]
+----------------------------------------
+failure 0.001 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.50813 2.16277 2.67879 3.1149  3.5079 ]
+[0.30226 0.25888 0.21236 0.18336]
+----------------------------------------
+failure 0.00095 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48573 2.13948 2.65208 3.10298 3.4924  3.85562]
+[0.31326 0.24412 0.21112 0.05114 0.16236]
+----------------------------------------
+failure 0.00101 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.50499 2.15293 2.67892 3.11565 3.50752]
+[0.31076 0.24928 0.21162 0.17262]
+----------------------------------------
+failure 0.001 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.48332 2.13705 2.66125 3.10868 3.50768]
+[0.27294 0.24028 0.2135  0.17796]
+----------------------------------------
+failure 0.00096 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.50674 2.1579  2.66766 3.10471 3.49589 3.85171]
+[0.305   0.24002 0.20444 0.18244 0.1699 ]
+----------------------------------------
+failure 0.00088 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.49105 2.1258  2.63692 3.07741 3.47544 3.82882]
+[0.31034 0.24336 0.20714 0.1917  0.16792]
+----------------------------------------
+failure 0.00096 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48366 2.13839 2.65375 3.10532 3.49533 3.85111]
+[0.31874 0.24582 0.20966 0.18732 0.169  ]
+----------------------------------------
+failure 0.00095 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.49494 2.13304 2.65171 3.09983 3.49262 3.84765]
+[0.30386 0.24314 0.20708 0.19104 0.1682 ]
+----------------------------------------
+failure 0.00099 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.50429 2.15717 2.67549 3.123   3.50358]
+[0.30564 0.24588 0.20588 0.18496]
+----------------------------------------
+failure 0.00101 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.49404 2.15047 2.67232 3.11741 3.50814]
+[0.30958 0.24768 0.2088  0.18378]
+----------------------------------------
+failure 0.00093 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48622 2.13192 2.65134 3.10015 3.48689 3.83884]
+[0.31412 0.24492 0.20866 0.18968 0.16888]
+----------------------------------------
+failure 0.00097 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.50153 2.14135 2.67396 3.11236 3.49719 3.85186]
+[0.26196 0.24442 0.2066  0.18394 0.17174]
+----------------------------------------
+failure 0.00089 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48815 2.14877 2.66126 3.09028 3.47502 3.84882]
+[0.31202 0.2389  0.20194 0.19004 0.17548]
+----------------------------------------
+failure 0.00092 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.47991 2.14024 2.64672 3.09084 3.48466 3.83615]
+[0.3125  0.23134 0.21156 0.18454 0.16314]
+----------------------------------------
+failure 0.00096 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.50027 2.14036 2.6605  3.10466 3.49674 3.86027]
+[0.31464 0.23588 0.20384 0.18228 0.16986]
+----------------------------------------
+failure 0.00102 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.47958 2.14281 2.66096 3.10901 3.5139 ]
+[0.2658  0.24192 0.209   0.18008]
+----------------------------------------
+failure 0.00096 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.49033 2.14314 2.66732 3.11176 3.49586 3.85207]
+[0.31066 0.21318 0.20806 0.18502 0.1716 ]
+----------------------------------------
+failure 0.00095 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48622 2.13303 2.65191 3.09322 3.49358 3.84836]
+[0.31412 0.24092 0.20316 0.18238 0.16788]
+----------------------------------------
+failure 0.00095 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.46933 2.14348 2.66294 3.10285 3.49314 3.84594]
+[0.317   0.23582 0.20562 0.18522 0.0768 ]
+----------------------------------------
+failure 0.00097 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.49142 2.15509 2.66305 3.1047  3.49681 3.85286]
+[0.3193  0.24586 0.2069  0.18196 0.17346]
+Estimation Pf par VAESS : 0.000968328125
+Variance de l'estimateur VAESS : 4.405775302721012e-05
+Le c.o.v 0.04549878485374999
+Temps d'exécution 190.3351926803589
+----------------------------------------
+failure 0.00095 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.50116 2.13621 2.651   3.09404 3.49263 3.85323]
+[0.30236 0.2454  0.20564 0.18582 0.16766]
+----------------------------------------
+failure 0.001 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.48262 2.13958 2.6669  3.10817 3.50682]
+[0.2065  0.24578 0.21488 0.18446]
+----------------------------------------
+failure 0.001 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.4933  2.14863 2.68068 3.1172  3.50581]
+[0.3123  0.24906 0.20656 0.17832]
+----------------------------------------
+failure 0.00101 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.47902 2.15573 2.67807 3.11684 3.50706]
+[0.31126 0.23304 0.21122 0.18598]
+----------------------------------------
+failure 0.00094 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48598 2.14869 2.65301 3.1025  3.49014 3.84241]
+[0.30468 0.23624 0.2081  0.18488 0.17044]
+----------------------------------------
+failure 0.00089 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48703 2.13174 2.63575 3.08162 3.47555 3.82953]
+[0.30996 0.25142 0.20678 0.18476 0.17204]
+----------------------------------------
+failure 0.00099 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.50337 2.15711 2.68369 3.11635 3.50332]
+[0.3225  0.24064 0.20784 0.17242]
+----------------------------------------
+failure 0.00089 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.47158 2.13006 2.64792 3.08936 3.47785 3.8348 ]
+[0.30884 0.25018 0.22008 0.18646 0.17466]
+----------------------------------------
+failure 0.0009 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.4794  2.13291 2.66017 3.09746 3.47926 3.8322 ]
+[0.3151  0.24798 0.21346 0.17842 0.16878]
+----------------------------------------
+failure 0.00083 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.50036 2.14155 2.64518 3.081   3.45875 3.81287]
+[0.30594 0.2371  0.20716 0.18486 0.16852]
+----------------------------------------
+failure 0.00089 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48043 2.1287  2.64476 3.09033 3.47467 3.83242]
+[0.32794 0.24442 0.20248 0.1866  0.1682 ]
+----------------------------------------
+failure 0.00092 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48834 2.13083 2.63737 3.08438 3.48158 3.85002]
+[0.30616 0.24702 0.20664 0.18618 0.1707 ]
+----------------------------------------
+failure 0.00098 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.49895 2.1545  2.67211 3.11655 3.50172]
+[0.30862 0.24484 0.1277  0.18738]
+----------------------------------------
+failure 0.00089 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48966 2.14362 2.66345 3.09451 3.47775 3.83048]
+[0.31154 0.2472  0.21046 0.18312 0.17466]
+----------------------------------------
+failure 0.00092 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48307 2.12366 2.64243 3.08874 3.48406 3.8457 ]
+[0.30934 0.25628 0.21526 0.1782  0.17412]
+----------------------------------------
+failure 0.00094 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.49814 2.15809 2.66319 3.09047 3.48974 3.84557]
+[0.32254 0.24582 0.20448 0.18534 0.17202]
+----------------------------------------
+failure 0.00096 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.50279 2.15673 2.67501 3.10707 3.49452 3.85258]
+[0.26232 0.24084 0.12184 0.19046 0.17486]
+----------------------------------------
+failure 0.00091 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.48703 2.13542 2.65326 3.08958 3.48096 3.84045]
+[0.31314 0.23604 0.21456 0.19194 0.16708]
+----------------------------------------
+failure 0.00104 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.50674 2.17058 2.68347 3.11964 3.51585]
+[0.31454 0.24174 0.21036 0.19718]
+----------------------------------------
+failure 0.00094 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.47615 2.13303 2.65446 3.08934 3.49049 3.84048]
+[0.31166 0.24756 0.20214 0.13744 0.16804]
+----------------------------------------
+failure 0.00096 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.47624 2.13035 2.64966 3.10075 3.49482 3.84957]
+[0.3147  0.24588 0.20696 0.1837  0.1638 ]
+----------------------------------------
+failure 0.00098 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.48506 2.13849 2.65225 3.10829 3.50271]
+[0.3061  0.24068 0.20788 0.19154]
+----------------------------------------
+failure 0.00101 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.50622 2.16222 2.682   3.11922 3.51173]
+[0.30818 0.23538 0.21    0.18498]
+----------------------------------------
+failure 0.00102 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.49756 2.14805 2.66726 3.11526 3.51122]
+[0.30926 0.24324 0.20438 0.17904]
+----------------------------------------
+failure 0.00098 with dimension 5, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
+[1.47982 2.13988 2.65019 3.10363 3.50091]
+[0.31468 0.24418 0.21432 0.18936]
+Estimation Pf par VAESS : 0.0009497812500000001
+Variance de l'estimateur VAESS : 5.130612369744397e-05
+Le c.o.v 0.05401888455625331

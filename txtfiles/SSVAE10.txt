@@ -1,0 +1,254 @@
+Temps d'exécution 179.31133270263672 -- VAE mélange de 800 Gaussians 
+----------------------------------------
+failure 0.00099 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.50526 2.15983 2.67705 3.1078  3.502  ]
+[0.2985  0.22794 0.19348 0.17426]
+Etape 0 terminée
+----------------------------------------
+failure 0.00099 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.49443 2.1485  2.66677 3.10735 3.50423]
+[0.30198 0.22732 0.19766 0.16982]
+Etape 1 terminée
+----------------------------------------
+failure 0.00099 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.4972  2.13869 2.65483 3.10978 3.50489]
+[0.30184 0.22828 0.20362 0.1758 ]
+Etape 2 terminée
+----------------------------------------
+failure 0.00097 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.51444 2.15392 2.66106 3.1043  3.49685 3.85253]
+[0.29332 0.2264  0.19584 0.1733  0.14704]
+Etape 3 terminée
+----------------------------------------
+failure 0.00094 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.50534 2.15077 2.67287 3.10011 3.48958 3.84742]
+[0.2971  0.2325  0.18888 0.0938  0.15728]
+Etape 4 terminée
+----------------------------------------
+failure 0.001 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.50048 2.15175 2.67013 3.11251 3.50513]
+[0.30122 0.22656 0.19522 0.17438]
+Etape 5 terminée
+----------------------------------------
+failure 0.00095 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.48414 2.14116 2.66558 3.10443 3.49129 3.84844]
+[0.29812 0.22954 0.19492 0.17008 0.16218]
+Etape 6 terminée
+----------------------------------------
+failure 0.00098 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.50065 2.1552  2.67221 3.11271 3.5008 ]
+[0.29722 0.22492 0.19604 0.16918]
+Etape 7 terminée
+----------------------------------------
+failure 0.00105 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.50603 2.14733 2.67259 3.11865 3.51997]
+[0.29182 0.2336  0.195   0.17898]
+Etape 8 terminée
+----------------------------------------
+failure 0.00099 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.49861 2.14308 2.66127 3.10278 3.50488]
+[0.2979  0.2266  0.1889  0.17314]
+Etape 9 terminée
+----------------------------------------
+failure 0.00102 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.49849 2.15085 2.66984 3.11545 3.51127]
+[0.30062 0.2325  0.18868 0.17268]
+Etape 10 terminée
+----------------------------------------
+failure 0.00094 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.49145 2.14087 2.65296 3.09278 3.48879 3.84427]
+[0.3     0.23114 0.19462 0.17128 0.14966]
+Etape 11 terminée
+----------------------------------------
+failure 0.00097 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.49337 2.14686 2.66497 3.10491 3.49922 3.87146]
+[0.29948 0.22342 0.19382 0.17006 0.1524 ]
+Etape 12 terminée
+----------------------------------------
+failure 0.00098 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.47816 2.14335 2.65127 3.09034 3.50003]
+[0.30352 0.2263  0.1985  0.17568]
+Etape 13 terminée
+----------------------------------------
+failure 0.00088 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.48859 2.13619 2.64994 3.07675 3.4713  3.83245]
+[0.23282 0.22936 0.19618 0.17476 0.15886]
+Etape 14 terminée
+----------------------------------------
+failure 0.00091 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.50608 2.15576 2.65813 3.10046 3.48294 3.84457]
+[0.29892 0.22204 0.19424 0.17004 0.16004]
+Etape 15 terminée
+----------------------------------------
+failure 0.00098 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.48284 2.13313 2.66269 3.1076  3.49971 3.84725]
+[0.29646 0.22946 0.19492 0.17228 0.16132]
+Etape 16 terminée
+----------------------------------------
+failure 0.00104 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.48578 2.15012 2.67511 3.12835 3.51503]
+[0.30248 0.2291  0.19744 0.17326]
+Etape 17 terminée
+----------------------------------------
+failure 0.00105 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.49823 2.15466 2.68202 3.12274 3.51794]
+[0.3013  0.22686 0.1971  0.17518]
+Etape 18 terminée
+----------------------------------------
+failure 0.00104 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.50916 2.15697 2.68824 3.13238 3.51862]
+[0.29348 0.23186 0.19746 0.17392]
+Etape 19 terminée
+----------------------------------------
+failure 0.00102 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.48799 2.14464 2.67015 3.11624 3.51524]
+[0.296   0.22614 0.19372 0.17648]
+Etape 20 terminée
+----------------------------------------
+failure 0.00103 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.49818 2.14414 2.66833 3.11908 3.51523]
+[0.29886 0.23272 0.19772 0.17308]
+Etape 21 terminée
+----------------------------------------
+failure 0.00099 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.50618 2.14652 2.66725 3.10586 3.50189]
+[0.29626 0.22956 0.19648 0.17526]
+Etape 22 terminée
+----------------------------------------
+failure 0.00097 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.50663 2.14582 2.6705  3.11152 3.49677 3.86538]
+[0.18892 0.22956 0.1915  0.17176 0.15828]
+Etape 23 terminée
+----------------------------------------
+failure 0.00097 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.48999 2.14285 2.66262 3.10643 3.49868 3.85704]
+[0.29818 0.22916 0.1949  0.17196 0.15894]
+Etape 24 terminée
+----------------------------------------
+failure 0.00096 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.50067 2.15661 2.67608 3.11207 3.49466 3.85587]
+[0.29776 0.22694 0.19422 0.17444 0.16222]
+Etape 25 terminée
+----------------------------------------
+failure 0.00096 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.50336 2.1464  2.66592 3.10533 3.4956  3.86884]
+[0.29898 0.2298  0.19158 0.16358 0.16242]
+Etape 26 terminée
+----------------------------------------
+failure 0.00112 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.51743 2.1618  2.69322 3.14193 3.53666]
+[0.29192 0.22848 0.19476 0.17252]
+Etape 27 terminée
+----------------------------------------
+failure 0.00105 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.48782 2.15535 2.67632 3.12157 3.52389]
+[0.29868 0.23088 0.19584 0.17226]
+Etape 28 terminée
+----------------------------------------
+failure 0.00103 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.50693 2.17075 2.67272 3.11653 3.51186]
+[0.29674 0.22418 0.197   0.1729 ]
+Etape 29 terminée
+----------------------------------------
+failure 0.00106 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.50593 2.1596  2.67772 3.12556 3.52296]
+[0.29726 0.22702 0.19222 0.17022]
+Etape 30 terminée
+----------------------------------------
+failure 0.00095 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.4931  2.14063 2.64648 3.09447 3.4925  3.85341]
+[0.29552 0.22956 0.19522 0.17446 0.14946]
+Etape 31 terminée
+----------------------------------------
+failure 0.00098 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.50696 2.14562 2.65938 3.10295 3.49979 3.85307]
+[0.22236 0.22436 0.19536 0.17624 0.15838]
+Etape 32 terminée
+----------------------------------------
+failure 0.00098 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.49433 2.14918 2.66702 3.09549 3.49934 3.85762]
+[0.2969  0.22678 0.19278 0.16632 0.15686]
+Etape 33 terminée
+----------------------------------------
+failure 0.00103 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.50529 2.1574  2.67566 3.11628 3.51164]
+[0.29836 0.22924 0.19572 0.17366]
+Etape 34 terminée
+----------------------------------------
+failure 0.00102 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.50617 2.16496 2.67926 3.11401 3.51213]
+[0.29948 0.2302  0.19118 0.17684]
+Etape 35 terminée
+----------------------------------------
+failure 0.00095 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.4864  2.14354 2.66114 3.10194 3.49332 3.8447 ]
+[0.29996 0.23126 0.1926  0.17286 0.1554 ]
+Etape 36 terminée
+----------------------------------------
+failure 0.00103 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.51526 2.16658 2.69408 3.12922 3.51263]
+[0.29528 0.23224 0.1905  0.16724]
+Etape 37 terminée
+----------------------------------------
+failure 0.00107 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.50646 2.16018 2.68658 3.12914 3.52025]
+[0.29502 0.22754 0.1928  0.17236]
+Etape 38 terminée
+----------------------------------------
+failure 0.00095 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.49347 2.14537 2.6587  3.09747 3.49081 3.8578 ]
+[0.30616 0.23008 0.19398 0.17432 0.15584]
+Etape 39 terminée
+----------------------------------------
+failure 0.00097 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.49595 2.14492 2.65768 3.10705 3.49927 3.86576]
+[0.29748 0.226   0.19534 0.16794 0.15794]
+Etape 40 terminée
+----------------------------------------
+failure 0.00096 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.48502 2.12455 2.64178 3.09522 3.49548 3.85799]
+[0.30002 0.2281  0.19998 0.17676 0.15706]
+Etape 41 terminée
+----------------------------------------
+failure 0.001 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.50707 2.15822 2.67347 3.11618 3.50567]
+[0.2954  0.22532 0.19402 0.17848]
+Etape 42 terminée
+----------------------------------------
+failure 0.00106 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.50091 2.16958 2.68516 3.12965 3.52017]
+[0.29446 0.23078 0.1963  0.17008]
+Etape 43 terminée
+----------------------------------------
+failure 0.00093 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.48102 2.11913 2.64425 3.09186 3.48602 3.84934]
+[0.29694 0.22784 0.19922 0.17248 0.16108]
+Etape 44 terminée
+----------------------------------------
+failure 0.00101 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.51333 2.14646 2.65361 3.10884 3.50895]
+[0.29208 0.22702 0.19498 0.1764 ]
+Etape 45 terminée
+----------------------------------------
+failure 0.00102 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.50358 2.15622 2.67466 3.11903 3.50879]
+[0.29958 0.22654 0.19828 0.17172]
+Etape 46 terminée
+----------------------------------------
+failure 0.00099 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.4978  2.15306 2.66416 3.10885 3.50478]
+[0.2935  0.22662 0.1994  0.17486]
+Etape 47 terminée
+----------------------------------------
+failure 0.001 with dimension 10 et pseudo_inputs 35 et nombre d'appel 170000
+[1.51483 2.16805 2.68371 3.12308 3.50666]
+[0.28776 0.2272  0.1945  0.1697 ]
+Etape 48 terminée
+----------------------------------------
+failure 0.00095 with dimension 10 et pseudo_inputs 35 et nombre d'appel 210000
+[1.49977 2.14946 2.66487 3.10542 3.49092 3.8494 ]
+[0.2986  0.22856 0.1924  0.1689  0.15458]
+Etape 49 terminée
+Estimation Pf par VAESS : 0.000992869140625
+Variance de l'estimateur VAESS : 4.5095619718051636e-05
+Le c.o.v 0.04541949978389342

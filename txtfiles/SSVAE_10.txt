@@ -1,0 +1,9 @@
+Temps d'exécution 208.317120552063
+----------------------------------------
+failure 0.00095 with dimension 10, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
+[1.49942 2.14047 2.66371 3.09802 3.49216 3.84562]
+Le taux d'aceptation en moyenne pour chaque evenement [0.29568 0.23174 0.19682 0.1698  0.15898]
+Etape 0 terminée
+Estimation Pf par VAESS : 0.0009501953125
+Variance de l'estimateur VAESS : 0.0
+Le c.o.v 0.0

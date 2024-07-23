@@ -1,0 +1,10 @@
+
+Temps d'exécution 272.86896800994873
+----------------------------------------
+failure 0.00128  with dimension 50, pseudo_inputs 55, noyau de 300 et nombre d'appel 170000
+Quantile [1.49348 2.15739 2.68432 3.15884 3.57726]
+Rate [0.28786 0.21828 0.18382 0.16696]
+----------------------------------------
+failure 0.00135  with dimension 50, pseudo_inputs 55, noyau de 300 et nombre d'appel 170000
+Quantile [1.50436 2.17352 2.70314 3.17313 3.59363]
+Rate [0.28368 0.21732 0.18688 0.16614]

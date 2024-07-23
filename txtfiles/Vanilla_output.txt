@@ -1,0 +1,27 @@
+------------------------------------
+------------------------------------
+------ Output of the Vanilla Subset Simulation ------
+
+Pf_SS = 0.00087 pour la dimension 2 et une perturbation 0.2
+quantile : [1.497 2.165 2.67  3.094 3.466 3.82 ]
+taux d'acceptation : [0.6184     0.56428333 0.5334     0.50351667 0.48753333]
+
+Pf_SS = 0.00111 pour la dimension 10 et une perturbation 0.2
+quantile : [1.494 2.139 2.666 3.121 3.538]
+taux d'acceptation : [0.5331     0.50046667 0.47586667 0.45921667]
+
+Pf_SS = 0.0009 pour la dimension 20 et une perturbation 0.2
+quantile : [1.498 2.136 2.651 3.089 3.477 3.837]
+taux d'acceptation : [0.46575    0.44246667 0.42221667 0.40133333 0.39145   ]
+
+Pf_SS = 0.00086 pour la dimension 50 et une perturbation 0.2
+quantile : [1.494 2.14  2.641 3.076 3.467 3.813]
+taux d'acceptation : [0.34925    0.329      0.31273333 0.3012     0.29091667]
+
+Pf_SS = 0.00086 pour la dimension 70 et une perturbation 0.2
+quantile : [1.511 2.156 2.676 3.103 3.467 3.797]
+taux d'acceptation : [0.2911     0.27825    0.26295    0.2539     0.24238333]
+
+Pf_SS = 0.00081 pour la dimension 100 et une perturbation 0.2
+quantile : [1.507 2.176 2.67  3.103 3.455 3.774]
+taux d'acceptation : [0.2308     0.2183     0.21003333 0.19658333 0.1896    ]

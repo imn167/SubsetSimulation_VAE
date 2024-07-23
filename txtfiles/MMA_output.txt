@@ -1,0 +1,36 @@
+------------------------------------------
+Taille de l'echantillon (10000, 2)
+MC estimation 0.0007
+3.732080100708255
+Estimation SS de défaillance 0.0009 et en moyenne 3.73208 et quantile [1.49748 2.15048 2.65665 3.09138 3.4789  3.835  ]
+Taux d'acceptation en moyenne [0.5864  0.52762 0.49772 0.47722 0.46525]
+------------------------------------------
+Taille de l'echantillon (10000, 10)
+MC estimation 0.0014
+3.740380491945651
+Estimation SS de défaillance 0.00093 et en moyenne 3.74038 et quantile [1.49407 2.13697 2.64238 3.08989 3.48725 3.8416 ]
+Taux d'acceptation en moyenne [0.56802 0.50015 0.46618 0.43102 0.40155]
+------------------------------------------
+Taille de l'echantillon (10000, 20)
+MC estimation 0.0008
+3.720978409127807
+Estimation SS de défaillance 0.00086 et en moyenne 3.72098 et quantile [1.49827 2.13375 2.63826 3.08519 3.46574 3.82608]
+Taux d'acceptation en moyenne [0.5647  0.50238 0.4553  0.4152  0.3956 ]
+------------------------------------------
+Taille de l'echantillon (10000, 50)
+MC estimation 0.0007
+3.7383125844207896
+Estimation SS de défaillance 0.00092 et en moyenne 3.73831 et quantile [1.49376 2.14941 2.6537  3.09115 3.48451 3.84573]
+Taux d'acceptation en moyenne [0.5719  0.50032 0.45185 0.4195  0.38885]
+------------------------------------------
+Taille de l'echantillon (10000, 70)
+MC estimation 0.0004
+3.7402082044501244
+Estimation SS de défaillance 0.00094 et en moyenne 3.74021 et quantile [1.5113  2.14889 2.65443 3.09463 3.49035 3.84402]
+Taux d'acceptation en moyenne [0.5639  0.49398 0.45282 0.42208 0.3801 ]
+------------------------------------------
+Taille de l'echantillon (10000, 100)
+MC estimation 0.0012
+3.738645860685373
+Estimation SS de défaillance 0.00093 et en moyenne 3.73865 et quantile [1.5071  2.16558 2.67343 3.10687 3.48806 3.84402]
+Taux d'acceptation en moyenne [0.57147 0.49968 0.45202 0.41162 0.37815]

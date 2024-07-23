@@ -1,0 +1,18 @@
+#!/bin/bash
+#SBATCH --job-name=nom_du_job    # -J nom-job      => nom du job
+#SBATCH --ntasks=48              # -n 48          => nombre de taches (obligatoire)
+#SBATCH --time 0-24:00           # -t 0-24:00       => duree (D-HH:MM) (obligatoire)
+#SBATCH --output=slurm.%j.out    # -o slurm.%j.out => Sortie standard
+#SBATCH --error=slurm.%j.err     # -e slurm.%j.err => Sortie Erreur
+#SBATCH --qos c5_prod_giga       # Queue 
+
+#######################################################################
+# 1- Working directory
+# 4- nb of proc
+#nb_procs=48
+#######################################################################
+
+module load python/3.10.8-gnu831 #version python pour le code
+
+python Vamprior_4branch.py
+touch _FINISHED_1
