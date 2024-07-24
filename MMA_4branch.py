@@ -11,7 +11,7 @@ CMC = list()
 rv = sp.multivariate_normal()
 for elt in range(100):
     # np.random.seed(123)
-    samples = np.random.normal(size = (10000,20))
+    samples = np.random.normal(size = (10000,50))
     N, d = samples.shape
 
 
