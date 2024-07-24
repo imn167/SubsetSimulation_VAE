@@ -1,9 +1,202 @@
-Temps d'exécution 208.317120552063
+Temps d'execution 184.22985863685608
 ----------------------------------------
-failure 0.00095 with dimension 10, pseudo_inputs 35, noyau de 500 et nombre d'appel 210000
-[1.49942 2.14047 2.66371 3.09802 3.49216 3.84562]
-Le taux d'aceptation en moyenne pour chaque evenement [0.29568 0.23174 0.19682 0.1698  0.15898]
-Etape 0 terminée
-Estimation Pf par VAESS : 0.0009501953125
-Variance de l'estimateur VAESS : 0.0
-Le c.o.v 0.0
+failure 0.00095 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.50948 2.16325 2.66875 3.10297 3.49254 3.84686]
+Rate [0.35271 0.26116 0.22769 0.20441 0.18492]
+----------------------------------------
+failure 0.00093 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.47706 2.14029 2.65467 3.09251 3.48901 3.85186]
+Rate [0.35394 0.26637 0.22785 0.20789 0.18186]
+----------------------------------------
+failure 0.00093 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.49702 2.15286 2.66098 3.10368 3.48868 3.84643]
+Rate [0.35148 0.26844 0.2266  0.20656 0.18631]
+----------------------------------------
+failure 0.00094 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.48777 2.13901 2.65471 3.09472 3.48987 3.84916]
+Rate [0.34893 0.27177 0.22934 0.20109 0.18497]
+----------------------------------------
+failure 0.00092 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.49988 2.13585 2.65819 3.0967  3.48453 3.83585]
+Rate [0.35164 0.2684  0.2296  0.19813 0.18826]
+----------------------------------------
+failure 0.00099 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 770000
+Quantile [1.50038 2.14344 2.66458 3.10546 3.50292]
+Rate [0.34881 0.26812 0.22911 0.20388]
+----------------------------------------
+failure 0.00093 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.50811 2.14095 2.66095 3.09466 3.48562 3.84051]
+Rate [0.34687 0.26734 0.22956 0.20415 0.18765]
+----------------------------------------
+failure 0.001 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 770000
+Quantile [1.50357 2.15404 2.68163 3.11879 3.50629]
+Rate [0.34964 0.2667  0.22686 0.19976]
+----------------------------------------
+failure 0.00098 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 770000
+Quantile [1.51513 2.15027 2.66379 3.1041  3.50129]
+Rate [0.34364 0.26232 0.22464 0.20474]
+----------------------------------------
+failure 0.00094 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.49015 2.14884 2.658   3.10557 3.49091 3.84753]
+Rate [0.35074 0.26788 0.22336 0.20026 0.18698]
+----------------------------------------
+failure 0.00099 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 770000
+Quantile [1.51013 2.16164 2.67152 3.10499 3.50364]
+Rate [0.3491  0.26243 0.22939 0.20549]
+----------------------------------------
+failure 0.00097 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.50672 2.16267 2.67888 3.10762 3.49824 3.85606]
+Rate [0.34965 0.26638 0.22744 0.20506 0.18572]
+----------------------------------------
+failure 0.00088 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.48772 2.12831 2.64591 3.08331 3.47427 3.8323 ]
+Rate [0.35313 0.27182 0.22718 0.20412 0.1819 ]
+----------------------------------------
+failure 0.00098 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 770000
+Quantile [1.50716 2.15601 2.66275 3.10878 3.50213]
+Rate [0.34369 0.2649  0.229   0.2053 ]
+----------------------------------------
+failure 0.00102 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 770000
+Quantile [1.51194 2.15923 2.67786 3.11535 3.51131]
+Rate [0.34745 0.26121 0.22496 0.20371]
+----------------------------------------
+failure 0.00091 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.49541 2.13897 2.65342 3.09341 3.48024 3.84648]
+Rate [0.34554 0.26932 0.22427 0.20296 0.03972]
+----------------------------------------
+failure 0.00092 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.50124 2.14507 2.65617 3.09506 3.48565 3.84289]
+Rate [0.34925 0.26643 0.22794 0.20558 0.18433]
+----------------------------------------
+failure 0.00093 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.49628 2.14726 2.65633 3.10106 3.48853 3.85003]
+Rate [0.35148 0.26612 0.23142 0.20182 0.18456]
+----------------------------------------
+failure 0.00093 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.49717 2.13935 2.65756 3.09354 3.4871  3.8495 ]
+Rate [0.35302 0.26947 0.22772 0.20444 0.18763]
+----------------------------------------
+failure 0.00091 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.49759 2.13709 2.64322 3.0871  3.47959 3.83558]
+Rate [0.35346 0.27053 0.23098 0.204   0.18531]
+----------------------------------------
+failure 0.00095 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.5035  2.14559 2.65041 3.10267 3.4929  3.85339]
+Rate [0.34647 0.26249 0.22928 0.20104 0.18596]
+----------------------------------------
+failure 0.00095 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.49837 2.15757 2.66774 3.0993  3.49226 3.8411 ]
+Rate [0.35497 0.24997 0.22441 0.19988 0.18336]
+----------------------------------------
+failure 0.00096 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.48715 2.14989 2.66552 3.10475 3.49606 3.8474 ]
+Rate [0.31972 0.14458 0.233   0.204   0.1826 ]
+----------------------------------------
+failure 0.00094 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.49947 2.14848 2.66561 3.10408 3.49038 3.83839]
+Rate [0.3454  0.2666  0.22482 0.20435 0.18584]
+----------------------------------------
+failure 0.00095 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.50375 2.14945 2.65856 3.09591 3.49294 3.84525]
+Rate [0.35282 0.26513 0.22884 0.20218 0.18718]
+Temps d'execution 185.59154605865479
+----------------------------------------
+failure 0.0009 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.47526 2.12404 2.63961 3.08002 3.47946 3.83506]
+Rate [0.35488 0.26482 0.23538 0.20357 0.18016]
+----------------------------------------
+failure 0.00096 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.50181 2.15026 2.65824 3.1112  3.49461 3.84793]
+Rate [0.34938 0.27016 0.22881 0.20338 0.18726]
+----------------------------------------
+failure 0.00099 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 770000
+Quantile [1.50062 2.15855 2.67488 3.1122  3.50223]
+Rate [0.22224 0.26831 0.23094 0.20296]
+----------------------------------------
+failure 0.00092 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.49263 2.1432  2.65151 3.09473 3.48567 3.84473]
+Rate [0.35508 0.27052 0.23001 0.20004 0.1813 ]
+----------------------------------------
+failure 0.00091 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.50413 2.14148 2.65427 3.09158 3.4806  3.83188]
+Rate [0.35216 0.27082 0.22719 0.20546 0.18252]
+----------------------------------------
+failure 0.00093 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.50706 2.15035 2.65561 3.09847 3.48566 3.84201]
+Rate [0.34894 0.25595 0.22899 0.1999  0.18594]
+----------------------------------------
+failure 0.00093 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.48768 2.13937 2.65096 3.09353 3.48499 3.8505 ]
+Rate [0.34986 0.26884 0.23384 0.2048  0.18547]
+----------------------------------------
+failure 0.00093 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.48944 2.13906 2.65738 3.09299 3.4866  3.84635]
+Rate [0.35715 0.26776 0.22863 0.2007  0.18386]
+----------------------------------------
+failure 0.00096 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.49454 2.14953 2.66075 3.09595 3.49485 3.85335]
+Rate [0.34637 0.26828 0.22802 0.2022  0.18621]
+----------------------------------------
+failure 0.00095 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.50419 2.15605 2.66593 3.09644 3.49239 3.8525 ]
+Rate [0.34814 0.26314 0.22716 0.20423 0.18248]
+----------------------------------------
+failure 0.00094 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.49287 2.15089 2.668   3.10318 3.48939 3.85164]
+Rate [0.35331 0.26847 0.22624 0.20374 0.18467]
+----------------------------------------
+failure 0.0009 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.49402 2.14336 2.6484  3.08395 3.47906 3.83674]
+Rate [0.35106 0.26729 0.2258  0.19996 0.1878 ]
+----------------------------------------
+failure 0.00099 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 770000
+Quantile [1.51257 2.15947 2.67868 3.11811 3.5037 ]
+Rate [0.3451  0.26923 0.22512 0.20099]
+----------------------------------------
+failure 0.00098 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 770000
+Quantile [1.49943 2.14609 2.66824 3.10344 3.5002 ]
+Rate [0.35232 0.26938 0.22535 0.20166]
+----------------------------------------
+failure 0.00095 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.49643 2.1425  2.64975 3.09421 3.49275 3.85289]
+Rate [0.34914 0.26672 0.22626 0.20352 0.18748]
+----------------------------------------
+failure 0.00095 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.50584 2.15225 2.66159 3.10051 3.49141 3.83886]
+Rate [0.34796 0.26159 0.22799 0.20225 0.1864 ]
+----------------------------------------
+failure 0.00098 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 770000
+Quantile [1.50803 2.15833 2.67439 3.10847 3.50026]
+Rate [0.35008 0.26628 0.22502 0.20542]
+----------------------------------------
+failure 0.00097 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.5061  2.15857 2.66915 3.11149 3.49907 3.85004]
+Rate [0.34558 0.26633 0.22598 0.20285 0.18743]
+----------------------------------------
+failure 0.00096 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.49078 2.14836 2.65988 3.10702 3.49618 3.85743]
+Rate [0.35422 0.27023 0.22562 0.2062  0.18762]
+----------------------------------------
+failure 0.0009 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.48797 2.14094 2.64401 3.09123 3.47859 3.83955]
+Rate [0.34824 0.26549 0.22806 0.19452 0.18212]
+----------------------------------------
+failure 0.00092 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.49855 2.14676 2.6532  3.09074 3.48407 3.83867]
+Rate [0.34664 0.26619 0.22761 0.19862 0.1866 ]
+----------------------------------------
+failure 0.00092 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.49682 2.14603 2.66422 3.09833 3.48387 3.83619]
+Rate [0.34784 0.26819 0.22918 0.20671 0.1754 ]
+----------------------------------------
+failure 0.00092 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
+Quantile [1.503   2.14546 2.65582 3.0937  3.4843  3.84172]
+Rate [0.3496  0.26158 0.23322 0.20438 0.1812 ]
+----------------------------------------
+failure 0.00098 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 770000
+Quantile [1.50942 2.15263 2.67058 3.10313 3.50097]
+Rate [0.34494 0.26768 0.22926 0.19832]
+----------------------------------------
+failure 0.00098 with dimension 10, pseudo_inputs 35, noyau de 300 et nombre d'appel 770000
+Quantile [1.50922 2.15648 2.67369 3.1075  3.50197]
+Rate [0.35028 0.26595 0.22906 0.20856]
