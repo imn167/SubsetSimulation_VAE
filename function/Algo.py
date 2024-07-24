@@ -14,7 +14,7 @@ import matplotlib
 cmap = matplotlib.colors.LinearSegmentedColormap.from_list("Sequential", [ '#80ef80', 'green', "limegreen", 'yellow', 'orange'])
 
 
-def plot_prior( z_variationnel, mu, sigma2,  path, z_encoded):
+def plot_prior( z_variationnel, mu, sigma2,  path, z_encoded, z_mcmc, scatter = True):
     K = mu.shape[0]
     #setting plot latent space if dim_latent == 2
     min_x = np.min(mu[:, 0])
@@ -26,10 +26,10 @@ def plot_prior( z_variationnel, mu, sigma2,  path, z_encoded):
     y1 = min_y - 0.3*(max_y - min_y)
     y2 = max_y + 0.3*(max_y - min_y)
 
-    inf_x = np.min([x1, np.min(z_variationnel[:, 0]), np.min(z_encoded[:, 0])])
-    sup_x = np.max([x2, np.max(z_variationnel[:, 0]), np.max(z_encoded[:, 0])])
-    inf_y = np.min([y1, np.min(z_variationnel[:, 1]), np.min(z_encoded[:, 1])])
-    sup_y = np.max([y2, np.max(z_variationnel[:, 1]), np.max(z_encoded[:, 1])])
+    inf_x = np.min([x1, np.min(z_variationnel[:, 0]), np.min(z_encoded[:, 0]), np.min(z_mcmc[:, 0])])
+    sup_x = np.max([x2, np.max(z_variationnel[:, 0]), np.max(z_encoded[:, 0]), np.max(z_mcmc[:, 0])])
+    inf_y = np.min([y1, np.min(z_variationnel[:, 1]), np.min(z_encoded[:, 1]), np.min(z_mcmc[:, 1])])
+    sup_y = np.max([y2, np.max(z_variationnel[:, 1]), np.max(z_encoded[:, 1]), np.max(z_mcmc[:, 1])])
 
     X, Y = np.meshgrid(np.linspace(inf_x,sup_x, 500), np.linspace(inf_y,sup_y, 500))
     pos = np.dstack((X,Y))
@@ -40,8 +40,10 @@ def plot_prior( z_variationnel, mu, sigma2,  path, z_encoded):
     pdf = pdf/K
         # plt.contour(X, Y,np.array( rv[i].pdf(pos)), levels = [.1,.2,.5])
     plt.pcolormesh(X, Y, pdf, cmap = cmap)
-    plt.scatter(z_variationnel[:, 0], z_variationnel[:, 1], s=6, c = 'red', alpha = .3)
-    plt.scatter(z_encoded[:, 0], z_encoded[:, 1], s=6, c = 'blue', alpha = .3)
+    if scatter :
+        plt.scatter(z_variationnel[:, 0], z_variationnel[:, 1], s=6, c = 'red', alpha = .1)
+        plt.scatter(z_encoded[:, 0], z_encoded[:, 1], s=6, c = 'blue', alpha = .1)
+        plt.scatter(z_mcmc[:, 0], z_mcmc[:, 1], s=6, c = 'purple', alpha = .1)
     
     plt.title('Gaussians of the Vamprior Mixture')
     plt.savefig(path)
@@ -82,6 +84,9 @@ def MCMC(length_chain, sample_threshold, sample_threshold_centered, PHI, N,d, in
     L[0] = sample_threshold[random_seed, :]
     U[0] = sample_threshold_centered[random_seed, :]
     phi_threshold = PHI[random_seed] # N
+    _, counts = np.unique(random_seed, return_counts= True )
+    print(f"Nombre de doublons au total {(counts[counts > 1]).sum()}") #règle de dénombrement ? 
+
     for i in range(length_chain-1):
         centered_candidat = np.array(inf_mixture.getSample(size = N))#N x d 
         candidat = sd  * centered_candidat + mean
@@ -93,8 +98,8 @@ def MCMC(length_chain, sample_threshold, sample_threshold_centered, PHI, N,d, in
         
         ratio = np.squeeze(pdf_candidat.reshape(-1,1)  + np.array(inf_mixture.computeLogPDF(U[i])) - pdf_Li.reshape(-1,1) - np.array(inf_mixture.computeLogPDF(centered_candidat)))
         # ratio = np.squeeze((pdf_candidat).reshape(-1,1) *np.array( inf_mixture.computePDF(U[i])) / (pdf_Li.reshape(-1,1) * np.array(inf_mixture.computePDF(centered_candidat))) )
+        near = np.exp(ratio) 
         ratio = np.exp(ratio) * (phi_candidate > gamma)
-        
         
         u = np.random.uniform(size = N)
         L[i+1] = candidat * np.expand_dims(u < ratio, axis = 1) + L[i] * np.expand_dims(u >= ratio, axis = 1) 
@@ -107,8 +112,11 @@ def MCMC(length_chain, sample_threshold, sample_threshold_centered, PHI, N,d, in
 
     #lag by keeping the last MCMC values for each chain 
     sample = L[i+1]
+    un, counts = np.unique(sample, return_counts= True, axis= 0 )
+    print(un.shape)
+    print(f"Nombre de doublons au total {(counts[counts > 1]).sum()}")
 
-    return PHI, sample, accep_sequance, run_count
+    return PHI, sample, accep_sequance, run_count, near
 
 # @profile
 def ss_vae(sample, threshold, phi, level, latent_dim, K_peuso_inputs, N_prior, length_chain, **kwargs):
@@ -155,6 +163,17 @@ def ss_vae(sample, threshold, phi, level, latent_dim, K_peuso_inputs, N_prior, l
         gc.collect()
 
          ### Plot of the learned distribution by the VAE 
+        print(f"Evenement {k} termine")
+        
+        PHI, sample, accep_sequence, run_count, ratio= MCMC(length_chain, sample_threshold, sample_threshold_centered, PHI, N, d, inf_mixture, rv, phi, sd, mean, quantile[k], run_count)
+        quantile.append(np.quantile(PHI, 1-level))
+        acceptance.append(accep_sequence / length_chain)
+        print(f"moyenne de PHI après MCMC {np.mean(PHI)}")
+        print(f"Proba superieur à 3.5 : {np.mean(PHI > threshold)}")
+        print(f"Taux d'acceptation {np.unique(accep_sequence)}")
+        print(f"Chain that hasn't moved at all : {ratio[ accep_sequence == 0] }")
+        z_mcmc, _, _ = encoder(sample)
+
         if kwargs['plot'] :
             density_vae = sd * np.array(inf_mixture.getSample(5000)) + mean
             
@@ -172,33 +191,16 @@ def ss_vae(sample, threshold, phi, level, latent_dim, K_peuso_inputs, N_prior, l
             plt.close()
 
             #Sampling in the latent space : coaperation of the Vamprior and variationnel posterior
+            path = 'figures/nature_latent_d' + str(d) + '_' + str(k) + '.png'
+            plot_prior(z, ps_mean.numpy(), ps_logvar.numpy(), path, z_encoded, z_mcmc, False)
             path = 'figures/latent_d' + str(d) + '_' + str(k) + '.png'
-            plot_prior(z, ps_mean.numpy(), ps_logvar.numpy(), path, z_encoded)
-        print(k)
-        
-        PHI, sample, accep_sequence, run_count = MCMC(length_chain, sample_threshold, sample_threshold_centered, PHI, N, d, inf_mixture, rv, phi, sd, mean, quantile[k], run_count)
-        quantile.append(np.quantile(PHI, 1-level))
-        acceptance.append(accep_sequence / length_chain)
-        print(f"moyenne de PHI après MCMC {np.mean(PHI)}")
-        print(f"Proba superieur à 3.5 : {np.mean(PHI > threshold)}")
-        plt.hist(PHI, density = True)
-        plt.show(block = False)
-        plt.pause(3)
-        plt.close()
-        k +=1
+            plot_prior(z, ps_mean.numpy(), ps_logvar.numpy(), path, z_encoded, z_mcmc)
 
-    plt.figure(figsize = (15,7))
-    if d < 6:
-        row = 1
-    else : 
-        row = d//5
-    for i in range(d):
-        plt.subplot(row,5,i+1)
-        plt.hist(sample[:,i], bins = 100, density=True)
-    
-    plt.show(block = False)
-    plt.pause(3)
-    plt.close()
+        if kwargs['memory']:
+            sequence.append(sample)
+            ratio_traj.append(ratio) #ratio before the indicator function 
+        #next event 
+        k +=1
 
 
     acceptance = np.array(acceptance)

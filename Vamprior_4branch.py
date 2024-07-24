@@ -13,19 +13,19 @@ file = 'txtfiles/SSVAE_' + str(d) + '.txt'
 with open(file, 'a') as f :
     cost = deque()
     estimation = deque()
-    for elt in range(2) : 
+    for elt in range(1) : 
             # np.random.seed(123)#fixed seed to compare with other results 
             samples = np.random.normal(size = (10000, d))
             gc.collect()
             N, d = samples.shape
             if elt == 0:
                 start = time.time()
-                chain , quantile, acceptance_rate, ratio, Pf_SS, k, Ntot = ss_vae(samples, 3.5, four_branch, .25, 2, K, N_prior,length_chain, plot = True, memory = False)
+                chain , quantile, acceptance_rate, ratio, Pf_SS, k, Ntot = ss_vae(samples, 3.5, four_branch, .25, 2, K, N_prior,length_chain, plot = True, memory = True)
                 print(f"Temps d'exécution {time.time()-start}", file = f)
-                # ratio = np.array(ratio)
+                ratio = np.array(ratio)
                 
-                #saving in a file 
-                # np.savez('Resultats/Dim_' + str(d) , chain, acceptance_rate, ratio)
+                # saving in a file 
+                np.savez('Resultats/Dim_' + str(d) , chain, acceptance_rate, ratio)
             else :
                 _ , quantile, acceptance_rate, _ , Pf_SS, k, Ntot = ss_vae(samples, 3.5, four_branch, .25, 2, K, N_prior,length_chain, plot = False, memory = False)
                 
