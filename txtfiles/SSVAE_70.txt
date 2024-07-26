@@ -25,3 +25,8 @@ Rate [0.28502 0.21666 0.18926 0.17272]
 failure 0.00147  with dimension 70, pseudo_inputs 35, noyau de 500 et nombre d'appel 170000
 Quantile [1.50161 2.17211 2.71353 3.19338 3.61987]
 Rate [0.28186 0.2127  0.18542 0.15954]
+Temps d'exécution 715.0555002689362
+----------------------------------------
+failure 0.00098  with dimension 70, pseudo_inputs 35, noyau de 300 et nombre d'appel 603450
+Quantile [1.51258 2.15432 2.67065 3.11195 3.50086]
+Rate [0.31369 0.23535 0.20493 0.18318]

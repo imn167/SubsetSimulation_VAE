@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 
 
-d = 20
+d = 70
 K = 35
 N_prior = 300
 length_chain = 25

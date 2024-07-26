@@ -242,53 +242,128 @@ Rate [0.34358 0.25596 0.21482 0.19082 0.17812]
 failure 0.00097 with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 960000
 Quantile [1.50621 2.16202 2.67658 3.11616 3.4985  3.85265]
 Rate [0.33701 0.25891 0.22104 0.19318 0.18192]
-Temps d'exécution 310.4581546783447
+Temps d'exï¿½cution 310.4581546783447
 ----------------------------------------
 failure 0.00093  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 1210000
 Quantile [1.50542 2.15397 2.66813 3.09767 3.48624 3.84433]
 Rate [0.34348 0.25924 0.22266 0.20051 0.17996]
-Temps d'exécution 311.6180856227875
+Temps d'exï¿½cution 311.6180856227875
 ----------------------------------------
 failure 0.00092  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 1210000
 Quantile [1.49141 2.14379 2.6581  3.09257 3.48462 3.84599]
 Rate [0.33762 0.26262 0.2211  0.19798 0.18083]
-Temps d'exécution 246.7180414199829
+Temps d'exï¿½cution 246.7180414199829
 ----------------------------------------
 failure 0.00098  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 970000
 Quantile [1.49195 2.1484  2.66903 3.11076 3.50188]
 Rate [0.345   0.26419 0.22349 0.20358]
-Temps d'exécution 314.2094371318817
+Temps d'exï¿½cution 314.2094371318817
 ----------------------------------------
 failure 0.00093  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 1210000
 Quantile [1.50496 2.15583 2.66767 3.09802 3.4863  3.84379]
 Rate [0.34061 0.26064 0.22628 0.20296 0.1842 ]
-Temps d'exécution 262.9761891365051
+Temps d'exï¿½cution 262.9761891365051
 ----------------------------------------
 failure 0.00099  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 970000
 Quantile [1.49546 2.14329 2.66237 3.10752 3.50399]
 Rate [0.34767 0.26324 0.22422 0.20032]
-Temps d'exécution 314.4528298377991
+Temps d'exï¿½cution 314.4528298377991
 ----------------------------------------
 failure 0.00095  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 1210000
 Quantile [1.50831 2.15322 2.66575 3.10446 3.4929  3.851  ]
 Rate [0.34467 0.26085 0.22203 0.1922  0.17672]
-Temps d'exécution 269.36268854141235
+Temps d'exï¿½cution 269.36268854141235
 ----------------------------------------
 failure 0.00098  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 970000
 Quantile [1.48373 2.14226 2.6584  3.10954 3.50134]
 Rate [0.35134 0.26123 0.22063 0.19307]
-Temps d'exécution 329.55072021484375
+Temps d'exï¿½cution 329.55072021484375
 ----------------------------------------
 failure 0.00093  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 1210000
 Quantile [1.49908 2.13747 2.66742 3.09997 3.48778 3.84306]
 Rate [0.3446  0.26427 0.22432 0.19896 0.17989]
-Temps d'exécution 331.9680931568146
+Temps d'exï¿½cution 331.9680931568146
 ----------------------------------------
 failure 0.00096  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 1210000
 Quantile [1.49575 2.15543 2.67063 3.10937 3.49537 3.84889]
 Rate [0.34666 0.2622  0.22274 0.20001 0.18315]
-Temps d'exécution 331.29114294052124
+Temps d'exï¿½cution 331.29114294052124
 ----------------------------------------
 failure 0.00095  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 1210000
 Quantile [1.51469 2.15069 2.67353 3.10677 3.49288 3.8548 ]
 Rate [0.3383  0.26244 0.22568 0.2004  0.17543]
+Temps d'exï¿½cution 268.98444533348083
+----------------------------------------
+failure 0.00098  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 970000
+Quantile [1.49686 2.15472 2.67    3.10958 3.50096]
+Rate [0.34354 0.26149 0.2218  0.19369]
+Temps d'exï¿½cution 260.2666382789612
+----------------------------------------
+failure 0.00098  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 970000
+Quantile [1.5034  2.16786 2.68325 3.1213  3.50138]
+Rate [0.34181 0.25823 0.22124 0.19758]
+Temps d'exï¿½cution 382.59426259994507
+----------------------------------------
+failure 0.00088  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 1710000
+Quantile [1.4854  2.1295  2.64349 3.09023 3.47238 3.83084]
+Rate [0.34898 0.26361 0.22631 0.20012 0.18698]
+Temps d'exï¿½cution 373.55459690093994
+----------------------------------------
+failure 0.0009  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 1710000
+Quantile [1.50245 2.14937 2.6554  3.09551 3.47801 3.83493]
+Rate [0.34379 0.26531 0.22759 0.20197 0.18363]
+Temps d'exï¿½cution 372.9125952720642
+----------------------------------------
+failure 0.00089  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 1710000
+Quantile [1.48824 2.13661 2.65412 3.09005 3.47521 3.84037]
+Rate [0.34739 0.25752 0.22023 0.19491 0.17819]
+Temps d'exï¿½cution 285.9692873954773
+----------------------------------------
+failure 0.00097  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 710000
+Quantile [1.50114 2.15463 2.66693 3.09829 3.49894 3.85236]
+Rate [0.33861 0.25369 0.22053 0.19152 0.18281]
+Temps d'exï¿½cution 228.70978116989136
+----------------------------------------
+failure 0.001  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 570000
+Quantile [1.49358 2.14553 2.66883 3.11476 3.50687]
+Rate [0.33837 0.25623 0.21561 0.1966 ]
+Temps d'exï¿½cution 1686.0929074287415
+----------------------------------------
+failure 0.00092  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 1210000
+Quantile [1.49156 2.14523 2.65785 3.0995  3.48293 3.843  ]
+Rate [0.34919 0.26332 0.22689 0.2018  0.18729]
+Temps d'exï¿½cution 1236.9054872989655
+----------------------------------------
+failure 0.00095  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 4960000
+Quantile [1.50575 2.16028 2.67294 3.10451 3.49349 3.84453]
+Rate [0.35419 0.26112 0.22681 0.20713 0.18344]
+Temps d'exï¿½cution 316.7357232570648
+----------------------------------------
+failure 0.00107  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 170000
+Quantile [1.51486 2.17215 2.68264 3.13685 3.5273 ]
+Rate [0.29322 0.21778 0.19338 0.1644 ]
+Temps d'exï¿½cution 263.988840341568
+----------------------------------------
+failure 0.00108  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 970000
+Quantile [1.50319 2.18479 2.69453 3.13482 3.52936]
+Rate [0.34032 0.24827 0.22053 0.18962]
+Temps d'exï¿½cution 150.30586791038513
+---------------------------------------- avec arret prÃ©mature 
+failure 0.00452  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 80152
+Quantile [1.48652 2.18885 2.85667 3.56541]
+Rate [0.01667 0.01664 0.01661]
+Temps d'exï¿½cution 200.11296796798706
+---------------------------------------- avec un arret prÃ©maturÃ© --> sous representation ? biais ? 
+failure 0.00345  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 119023
+Quantile [1.50332 2.26717 2.8997  3.44462 3.93206]
+Rate [0.01 0.01 0.01 0.01]
+Temps d'exï¿½cution 328.6988482475281
+----------------------------------------
+failure 0.00092  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 1210000
+Quantile [1.48754 2.14312 2.66277 3.10115 3.48206 3.83909]
+Rate [0.34043 0.26103 0.22064 0.19782 0.1837 ]
+Temps d'exécution 335.5098874568939
+----------------------------------------
+failure 0.00093  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 751547
+Quantile [1.50244 2.14292 2.6539  3.10054 3.48851 3.84523]
+Rate [0.34938 0.26107 0.22772 0.19769 0.18261]

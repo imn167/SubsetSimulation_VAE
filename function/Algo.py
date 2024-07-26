@@ -10,6 +10,10 @@ silence_tensorflow()
 
 
 import gc
+
+
+##################################################################################################
+############################ Function for visualisation ##############################
 import matplotlib
 cmap = matplotlib.colors.LinearSegmentedColormap.from_list("Sequential", [ '#80ef80', 'green', "limegreen", 'yellow', 'orange'])
 
@@ -51,6 +55,10 @@ def plot_prior( z_variationnel, mu, sigma2,  path, z_encoded, z_mcmc, scatter = 
     plt.pause(3)
     plt.close()
 
+
+####################################################################################
+##################### VAE setting ########################
+
 # @profile
 def set_vae(input_dim, latent_dim, pseudo_inputs, samples):
     encoder = Encoder(input_dim, latent_dim, True)
@@ -74,7 +82,12 @@ def set_vae(input_dim, latent_dim, pseudo_inputs, samples):
     tf.keras.backend.clear_session()
     return vae
 
-# @profile
+
+#####################################################################################################################
+############################## MCMC part #################################
+
+
+###############
 def MCMC(length_chain, sample_threshold, sample_threshold_centered, PHI, N,d, inf_mixture, rv, phi, sd, mean, gamma, run_count):
     L = np.zeros((length_chain, N, d)) #NON_centered chain MCMC
     U = np.zeros((length_chain, N, d)) #Centered chain MCMC 
@@ -116,7 +129,145 @@ def MCMC(length_chain, sample_threshold, sample_threshold_centered, PHI, N,d, in
     print(un.shape)
     print(f"Nombre de doublons au total {(counts[counts > 1]).sum()}")
 
-    return PHI, sample, accep_sequance, run_count, near
+    return PHI, sample, accep_sequance, run_count
+
+
+########## With adaptive chain depth (stopping at each proposal )
+# @profile
+def MCMC_adaptive_acceptation(length_chain, sample_threshold, sample_threshold_centered, PHI, N,d, inf_mixture, rv, phi, sd, mean, gamma, run_count):
+    L = np.zeros((length_chain, N, d)) #NON_centered chain MCMC
+    U = np.zeros((length_chain, N, d)) #Centered chain MCMC 
+    accep_sequance = np.zeros(N)
+    #BOOTSTRAP :  threshold or sample ? 
+    random_seed = np.random.choice(sample_threshold.shape[0], size = N) 
+    L[0] = sample_threshold[random_seed, :]
+    U[0] = sample_threshold_centered[random_seed, :]
+    phi_threshold = PHI[random_seed] # N
+
+    n = N
+    idx = np.arange(N)
+    for i in range(length_chain-1):
+        centered_candidat = np.array(inf_mixture.getSample(size = n))#N x d 
+        candidat = sd  * centered_candidat + mean
+        pdf_candidat = rv.logpdf(candidat)
+        pdf_Li = rv.logpdf(L[i, idx, :]) #(N,)
+        ratio = np.squeeze(pdf_candidat.reshape(-1,1)  + \
+                           np.array(inf_mixture.computeLogPDF(U[i, idx, :])) - pdf_Li.reshape(-1,1) - np.array(inf_mixture.computeLogPDF(centered_candidat)))
+        log_u = np.log(np.random.uniform(size = n))
+
+        #track for the indices of the acceptation / rejection Markov process at each iteration
+        idx_ratio = idx[log_u < ratio]
+
+        #track for the indices of the indices for the i-th iteration
+        idx_candidat = np.arange(n)[log_u < ratio]
+
+        phi_candidate = phi(candidat[log_u < ratio]) 
+
+        failure_zone = phi_candidate > gamma
+        idx_candidat = idx_candidat[failure_zone]
+        idx_failure_zone = idx_ratio[failure_zone] 
+        
+        print(f"Shape des indices avec proposition {idx_failure_zone.shape}")
+
+        run_count += phi_candidate.shape[0] #call to phi
+        
+        # ratio = np.squeeze((pdf_candidat).reshape(-1,1) *np.array( inf_mixture.computePDF(U[i])) / (pdf_Li.reshape(-1,1) * np.array(inf_mixture.computePDF(centered_candidat))) )
+        # ratio = np.exp(ratio) * (phi_candidate > gamma)
+        
+        #stopping the chain for those accepted 
+
+        idx_not_done = np.delete(idx, [i for i,val in enumerate(idx) if val in idx_failure_zone])
+        print(f"Shape des indices sans proposition {idx_not_done.shape}")
+        #not centered 
+        # print(L[i+1:, idx_failure_zone, :])
+        L[i+1:, idx_failure_zone, :] = np.repeat(np.expand_dims(candidat[idx_candidat], axis=0), (length_chain-i-1), axis=0) #Tensor l-i x accep_phi x d
+        L[i+1, idx_not_done, :] = L[i, idx_not_done, :]
+        #centered 
+        U[i+1:, idx_failure_zone, :] = np.repeat(np.expand_dims(centered_candidat[idx_candidat], axis=0), (length_chain-i-1), axis=0) #Tensor l-i x accep_phi x d
+        U[i+1, idx_not_done, :] = U[i, idx_not_done, :]
+
+        #MAJ phi values
+        phi_threshold[idx_failure_zone] = phi_candidate[failure_zone] 
+        accep_sequance[idx_ratio] = accep_sequance[idx_ratio] +  failure_zone *1 #Acceptance for each Markov chain 
+        idx = idx_not_done
+        n = idx.shape[0]
+        print(f"Indice deja acceptés : {idx_failure_zone}")
+        if n == 0:
+            break
+    print(n, '\n', i)
+        # L[i+1] = candidat * np.expand_dims(u < ratio, axis = 1) + L[i] * np.expand_dims(u >= ratio, axis = 1) 
+        # U[i+1] = centered_candidat * np.expand_dims(u < ratio, axis = 1) + U[i] * np.expand_dims(u >= ratio, axis = 1) 
+    #N_chain of length 10 are completed 
+    PHI = phi_threshold #MAJ phi value
+
+    print(np.sum(np.sort(np.concatenate([idx_not_done, idx_failure_zone]))))
+    
+
+    #lag by keeping the last MCMC values for each chain 
+    sample = L[i+1]
+    print(sample)
+    # print(sample)
+
+    return PHI, sample, accep_sequance, run_count
+
+#########################################################
+def MCMC_optimized_evaluation(length_chain, sample_threshold, sample_threshold_centered, PHI, N,d, inf_mixture, rv, phi, sd, mean, gamma, run_count):
+    L = np.zeros((length_chain, N, d)) #NON_centered chain MCMC
+    U = np.zeros((length_chain, N, d)) #Centered chain MCMC 
+    accep_sequance = np.zeros(N)
+    #BOOTSTRAP :  threshold or sample ? 
+    random_seed = np.random.choice(sample_threshold.shape[0], size = N) 
+    L[0] = sample_threshold[random_seed, :]
+    U[0] = sample_threshold_centered[random_seed, :]
+    phi_threshold = PHI[random_seed] # N
+
+    idx = np.arange(N)
+    for i in range(length_chain-1):
+        centered_candidat = np.array(inf_mixture.getSample(size = N))#N x d 
+        candidat = sd  * centered_candidat + mean
+        pdf_candidat = rv.logpdf(candidat)
+        pdf_Li = rv.logpdf(L[i]) #(N,)
+        ratio = np.squeeze(pdf_candidat.reshape(-1,1)  + \
+                           np.array(inf_mixture.computeLogPDF(U[i])) - pdf_Li.reshape(-1,1) - np.array(inf_mixture.computeLogPDF(centered_candidat)))
+        
+        log_u = np.log(np.random.uniform(size = N))
+
+        #track for the indices of the acceptation / rejection Markov process at each iteration
+        idx_ratio = idx[log_u < ratio]
+        phi_candidate = phi(candidat[idx_ratio]) 
+        failure_zone = phi_candidate > gamma
+        idx_failure_zone = idx_ratio[failure_zone] 
+
+        run_count += phi_candidate.shape[0] #call to phi
+        
+        # ratio = np.squeeze((pdf_candidat).reshape(-1,1) *np.array( inf_mixture.computePDF(U[i])) / (pdf_Li.reshape(-1,1) * np.array(inf_mixture.computePDF(centered_candidat))) )
+        # ratio = np.exp(ratio) * (phi_candidate > gamma)
+        
+        #stopping the chain for those accepted 
+
+        idx_out_failure_zone = np.delete(idx, [i for i,val in enumerate(idx) if val in idx_failure_zone])
+        L[i+1:, idx_failure_zone, :] = candidat[idx_failure_zone]
+        L[i+1, idx_out_failure_zone, :] = L[i, idx_out_failure_zone, :]
+        #centered 
+        U[i+1:, idx_failure_zone, :] = centered_candidat[idx_failure_zone]
+        U[i+1, idx_out_failure_zone, :] = U[i, idx_out_failure_zone, :]
+
+        #MAJ phi values
+        phi_threshold[idx_failure_zone] = phi_candidate[failure_zone] 
+        accep_sequance[idx_failure_zone] = accep_sequance[idx_failure_zone] +  1 #Acceptance for each Markov chain to be in the failure zone 
+
+    #MAJ phi value
+    PHI = phi_threshold 
+
+    
+
+    #lag by keeping the last MCMC values for each chain 
+    sample = L[i+1]
+
+    return PHI, sample, accep_sequance, run_count
+
+
+
 
 # @profile
 def ss_vae(sample, threshold, phi, level, latent_dim, K_peuso_inputs, N_prior, length_chain, **kwargs):
@@ -144,7 +295,9 @@ def ss_vae(sample, threshold, phi, level, latent_dim, K_peuso_inputs, N_prior, l
             print("Exception raised")
             break
         
+        
         PHI = PHI[idx]
+        print('---------------------------------------')
         print(f"Moyenne avant MCMC : {np.mean(PHI)}")
         sample_threshold = sample[idx, :]
         #reduction + centering 
@@ -163,15 +316,30 @@ def ss_vae(sample, threshold, phi, level, latent_dim, K_peuso_inputs, N_prior, l
         gc.collect()
 
          ### Plot of the learned distribution by the VAE 
-        print(f"Evenement {k} termine")
         
-        PHI, sample, accep_sequence, run_count, ratio= MCMC(length_chain, sample_threshold, sample_threshold_centered, PHI, N, d, inf_mixture, rv, phi, sd, mean, quantile[k], run_count)
+        
+        PHI, sample, accep_sequence, run_count= MCMC_optimized_evaluation(length_chain, sample_threshold, sample_threshold_centered, 
+                                                            PHI, N, d, inf_mixture, rv, phi, sd, mean, quantile[k], run_count)
         quantile.append(np.quantile(PHI, 1-level))
         acceptance.append(accep_sequence / length_chain)
+        
+        ##############
         print(f"moyenne de PHI après MCMC {np.mean(PHI)}")
         print(f"Proba superieur à 3.5 : {np.mean(PHI > threshold)}")
         print(f"Taux d'acceptation {np.unique(accep_sequence)}")
-        print(f"Chain that hasn't moved at all : {ratio[ accep_sequence == 0] }")
+        
+        D = sample[accep_sequence == 0, :]
+        unique, index, counts = np.unique(D, return_counts= True, return_index=True ,axis=0)
+        print(unique.shape)
+        index_D = index[counts > 1]
+        print(f"echantillons qui n'ont pas bouges {(accep_sequence == 0 *1 ).sum()}")
+        print(f"echantillons qui se repetent {(counts[counts > 1]).shape} et occurence {counts[counts > 1].sum()}")
+        
+        
+        
+
+        print('--------------------------------------------------------')
+        ##############
         z_mcmc, _, _ = encoder(sample)
 
         if kwargs['plot'] :
@@ -198,7 +366,21 @@ def ss_vae(sample, threshold, phi, level, latent_dim, K_peuso_inputs, N_prior, l
 
         if kwargs['memory']:
             sequence.append(sample)
-            ratio_traj.append(ratio) #ratio before the indicator function 
+            # ratio_traj.append(ratio) #ratio before the indicator function 
+        
+        # if np.shape(index_D) != 0:
+        #     heights = [(ratio[index_D] > 1 ).sum(), (ratio[index_D] <= 1 ).sum()]
+        #     levels = ['ratio > 1', 'ratio <= 1']
+
+        #     fig, ax = plt.figure()
+        #     bar_container = ax.bar(levels, heights, color = ['blue', 'green'])
+        #     ax.bar_label(bar_container, fontsize = 14)
+        #     ax.set_ylim(0, np.max(heights)+5)
+
+        #     del fig
+        #     del ax
+        
+        print(f"Evenement {k} termine") 
         #next event 
         k +=1
 
