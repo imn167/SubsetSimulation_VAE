@@ -5,54 +5,73 @@ import matplotlib.pyplot as plt
 
 
 
-d = 70
+d = 2
+Pf = 9.3e-4
+s = 3.5
+
 K = 35
 N_prior = 300
-length_chain = 25
+length_chain = 2
+p0 = .25
+latent_dim = 2
+
+batch = 12
+
 file = 'txtfiles/SSVAE_' + str(d) + '.txt'
 with open(file, 'a') as f :
     cost = deque()
     estimation = deque()
     for elt in range(1) : 
-            # np.random.seed(123)#fixed seed to compare with other results 
-            samples = np.random.normal(size = (10000, d))
-            gc.collect()
-            N, d = samples.shape
-            if elt == 0:
-                start = time.time()
-                chain , quantile, acceptance_rate, ratio, Pf_SS, k, Ntot = ss_vae(samples, 3.5, four_branch, .25, 2, K, N_prior,length_chain, plot = True, memory = True)
-                print(f"Temps d'exécution {time.time()-start}", file = f)
-                ratio = np.array(ratio)
+        # np.random.seed(123)#fixed seed to compare with other results 
+        samples = np.random.normal(size = (10000, d))
+        gc.collect()
+        N, d = samples.shape
+        if elt == 0:
+            start = time.time()
+            chain , quantile, acceptance_rate, ratio, Pf_SS, k, Ntot = ss_vae(samples, s, four_branch, p0, latent_dim, K, N_prior,length_chain, plot = True, memory = False)
+            print('----------------------------------------------------------------------', file= f)
+            print('----------------------------------------------------------------------', file= f)
+
+            print(f"Temps d'exécution de l'algorithme {time.time()-start}", file = f)
+            ratio = np.array(ratio)
+            
+            # saving in a file 
+            # np.savez('Resultats/Dim_' + str(d) , chain, acceptance_rate, ratio)
+        else :
+            _ , quantile, acceptance_rate, _ , Pf_SS, k, Ntot = ss_vae(samples, s, four_branch, p0, latent_dim, K, N_prior,length_chain, plot = False, memory = False)
                 
-                # saving in a file 
-                np.savez('Resultats/Dim_' + str(d) , chain, acceptance_rate, ratio)
-            else :
-                _ , quantile, acceptance_rate, _ , Pf_SS, k, Ntot = ss_vae(samples, 3.5, four_branch, .25, 2, K, N_prior,length_chain, plot = False, memory = False)
-                
+        print('---------------------------')
+        print(f'Pf_SS {Pf_SS}')
+        print(f"Rate {acceptance_rate}")
+        cost.append(Ntot)
+        estimation.append(Pf_SS)
+        print(f'Etape {elt} terminée')
+        print('-------------------------------')
 
-            cost.append(Ntot)
-            estimation.append(Pf_SS)
-            print('----------------------------------------', file= f)
-            print(f'Une longueur de chaîne de {length_chain}')
-            print(f"failure {np.round(Pf_SS, 5)}  with dimension {d}, pseudo_inputs {K}, noyau de {N_prior} et nombre d'appel {Ntot}", file = f)
-            print(f"Quantile {np.round(quantile, 5)}", file = f)
-
-            # acceptance_rate = np.array(acceptance_rate)
-
-            # print(f"Le taux d'aceptation en moyenne pour chaque evenement {np.round(acceptance_rate.mean(axis = 1), 5)}")
-            print(f"Rate {acceptance_rate}", file = f)
-
-
-            print(f'Etape {elt} terminée')
-    estimation = np.array(estimation)
     cost = np.array(cost)
-    expectation = estimation.mean()
-    sd = np.array(estimation).std()
+    estimation = np.array(estimation)
+
+    cov = estimation.std() / estimation.mean()
+    Ntot = int(cost.mean())
+    #Nreq = int((1-Pf)/ (Pf*cov**2)) +1
+        
+    print('----------------------------------------------------------------------', file= f)
+    print(f'SS_VAE avec vamprior k = {K} | {N_prior} de gaussiennes pour le mélange fini ', file= f)
+    print('----------------------------------------------------------------------', file= f)
+    print(f'dimension d = {d} | Pf_SS = {np.round(estimation.mean(), 8)} | cov(Pf_SS) = {np.round(cov, 8)} | Ntot = {Ntot} | l = {length_chain}', file=f)
+    print('----------------------------------------------------------------------', file= f)
+    print(f"Rate {acceptance_rate}", file = f)
+    print('----------------------------------------------------------------------', file= f)
+    print(f"Quantile {np.round(quantile, 5)}", file = f)
+
+
+    path1 = 'Resultats/Estimation_d' + str(d) + '/batch' + str(batch)
+    np.savez(path1, estimation, cost)
     # print(f'Estimation Pf par VAESS : {expectation}', file = f)
     # print(f"Variance de l'estimateur VAESS : {sd}", file= f)
     # print(f"Le c.o.v {sd/expectation}",file=f)
 
-# path1 = 'Resultats/Estimation_d' + str(d)
+
 # path2 = 'Resultats/Cost_d' + str(d)
 # np.save(path1, estimation)
 # np.save(path2, cost)

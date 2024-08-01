@@ -1,0 +1,14 @@
+Temps d'exï¿½cution 150.30586791038513
+---------------------------------------- avec arret premature 
+failure 0.00452  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 80152
+Quantile [1.48652 2.18885 2.85667 3.56541]
+% Rate [0.01667 0.01664 0.01661]
+Temps d'exï¿½cution 200.11296796798706
+---------------------------------------- avec un arret premature --> biais 
+failure 0.00345  with dimension 20, pseudo_inputs 35, noyau de 300 et nombre d'appel 119023
+Quantile [1.50332 2.26717 2.8997  3.44462 3.93206]
+% Rate [0.01 0.01 0.01 0.01]
+Temps d'exï¿½cution 328.6988482475281
+
+
+Doublon provenant du bootstrap ? 

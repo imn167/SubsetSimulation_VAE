@@ -311,7 +311,10 @@ def ss_vae(sample, threshold, phi, level, latent_dim, K_peuso_inputs, N_prior, l
 
         z_encoded,_, _ = encoder(sample_threshold_centered)
 
-        ps_mean, ps_logvar, z = vae.density_x(N_prior)
+        ps_mean, ps_logvar, z, isnan = vae.density_x(N_prior)
+        if isnan :
+            break #stopping the excution 
+
         inf_mixture = vae.distrx #openturns Mixture 
         gc.collect()
 
@@ -343,20 +346,21 @@ def ss_vae(sample, threshold, phi, level, latent_dim, K_peuso_inputs, N_prior, l
         z_mcmc, _, _ = encoder(sample)
 
         if kwargs['plot'] :
-            density_vae = sd * np.array(inf_mixture.getSample(5000)) + mean
-            
-            plt.figure(figsize = (15,7))
-            if d < 6:
-                row = 1
-            else : 
-                row = d//5
-            for i in range(d):
-                plt.subplot(row,5,i+1)
-                plt.hist(density_vae[:,i], bins = 100, density=True)
-            plt.savefig('figures/hist_d' + str(d) + '_' + str(k) + '.png')
-            plt.show(block = False)
-            plt.pause(3)
-            plt.close()
+            if d < 21 :
+                density_vae = sd * np.array(inf_mixture.getSample(5000)) + mean
+                
+                plt.figure(figsize = (15,7))
+                if d < 6:
+                    row = 1
+                else : 
+                    row = d//5
+                for i in range(d):
+                    plt.subplot(row,5,i+1)
+                    plt.hist(density_vae[:,i], bins = 100, density=True)
+                plt.savefig('figures/hist_d' + str(d) + '_' + str(k) + '.png')
+                plt.show(block = False)
+                plt.pause(3)
+                plt.close()
 
             #Sampling in the latent space : coaperation of the Vamprior and variationnel posterior
             path = 'figures/nature_latent_d' + str(d) + '_' + str(k) + '.png'

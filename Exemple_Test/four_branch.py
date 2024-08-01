@@ -18,3 +18,10 @@ def four_branch(X, beta = 0):
 
     return - minimum
 
+
+# x= np.random.normal(size= (10000000, 2))
+
+# y = four_branch(x, 3.5)
+
+# plt.hist(y, density=True, bins= 'auto')
+# plt.show()

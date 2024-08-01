@@ -128,6 +128,7 @@ class Sampling(layers.Layer):
     
 ##### Creation of the Encoder Class #####
 class Encoder(layers.Layer):
+
   def __init__(self, input_dim, latent_dim, training, **kwargs):
     super(Encoder, self).__init__(name='encoder', **kwargs)
     self.act = layers.LeakyReLU(alpha = .3)
@@ -148,6 +149,8 @@ class Encoder(layers.Layer):
     return z_mean, z_log_var, z
   
   ############## Creation of the Decoder Class #################
+
+
 class Decoder(layers.Layer):
 
  def __init__(self,input_dim, latent_dim,training, **kwargs):
@@ -233,13 +236,20 @@ class VAE(tf.keras.Model):
     zn = z[idx, :]
     x_mean, x_log_var= self.decoder(zn) #n_samples distribution 
     x_std = np.exp(x_log_var.numpy() *0.5)
-    idx = np.sum(np.isnan(x_std), axis = 0)
-    print(idx)
-    Dist = [ot.Normal(mu, sigma) for mu, sigma in zip(x_mean.numpy(), np.exp(x_log_var.numpy() *0.5))]
-    Distr_x = ot.Mixture(Dist)
-    self.distrx = Distr_x
-    self.distrz = vamprior
-    return ps_mean, ps_logvar, z
+    x_mean = x_mean.numpy()
+    idx = np.isnan(x_std.sum(axis = 1))
+    isnan = (idx.sum() > 0)
+    if isnan:
+      return ps_mean, ps_logvar, z, True
+    # x_mean = x_mean.numpy()[idx, :]
+    # x_std = x_std[idx, :]
+    # print(x_std.shape)
+    else :
+      Dist = [ot.Normal(mu, sigma) for mu, sigma in zip(x_mean, x_std)]
+      Distr_x = ot.Mixture(Dist)
+      self.distrx = Distr_x
+      self.distrz = vamprior
+      return ps_mean, ps_logvar, z, False
   
   @tf.function
   def train_step(self, data):

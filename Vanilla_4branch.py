@@ -4,6 +4,7 @@ import scipy.stats as sp
 import matplotlib.pyplot as plt 
 from statsmodels.graphics import tsaplots
 from function.Vanillla_SS import subset_simulation
+from collections import deque
 
 
 def autocorr(x, h):
@@ -18,41 +19,72 @@ def autocorr(x, h):
 
 ## Vanilla Subset Simulation with a  normal proposal kernel with mean the precedent points and variance  
 # d = [2, 10, 20,50,70, 100]
-t = 3.5
-Pf = 9.3e-4
-sd = .4
-estimation = list()
-sample = np.random.normal(size = (100, 2))
-print(np.mean(four_branch(sample, 5) > t)
-)
-# for elt in range(100):
-#     # np.random.seed(123)
-#     sample = np.random.normal(size= (10000, 2))
+t = 5
+Pf = 1.5e-6
+sd = .1
+d= 100
+length_chain = 6
+estimation = deque()
+acceptance = deque()
+cost = deque()
+# sample = np.random.normal(size = (1000, 2))
+# print(np.mean(four_branch(sample, 5) > t)
+# )
+for elt in range(100):
     
-#     chain, k, failure, quantile, accep_rate = subset_simulation(sample, t, four_branch, sd, .25)
-#     estimation.append(failure)
-#     print(f'Pf_SS = {np.round(failure, 5)} pour la dimension {elt} et une perturbation {sd}')
-#     print(f'quantile : {np.round(quantile, 3)}')
-#     acceptance = np.array(accep_rate)
-#     print(f"taux d'acceptation : {acceptance.mean(axis=1)}")
-#     last = chain[-1]
-#     print(f"Autocorr à un lag 1 : {autocorr(last[:,0], 1)} et {autocorr(last[:,1], 1)}")
-#     # a = tsaplots.plot_acf(last[:, 0])
-#     # a = tsaplots.plot_acf(last[:, 1])
-#     # plt.show(block = False)
-#     # plt.pause(2)
-#     # plt.close()
-#     # plt.plot(last[ :, 0], label = r'$X_1$')
-#     # plt.legend()
-#     # plt.show(block = False)
-#     # plt.pause(2)
-#     # plt.close()
-#     # plt.plot(last[:,  1], label = r'$X_2$')
-#     # plt.legend()
-#     # plt.show(block = False)
-#     # plt.pause(2)
-#     # plt.close()
+    sample = np.random.normal(size= (10000, d))
+    
+    chain, k, failure, quantile, accep_rate, Ntot = subset_simulation(sample, t, four_branch, sd, length_chain, .25, False)
+    estimation.append(failure)
+    print('-------------------------------------------------------------------------')
+    print(f'Pf_SS = {np.round(failure, 8)} pour la dimension {d} et une perturbation {sd}')
+    print(f'quantile : {np.round(quantile, 3)}')
+    accept = np.array(accep_rate)
+    accep_all_chain = accept.mean(axis=1)
+    acceptance.append(accep_all_chain)
+    cost.append(Ntot)
+    print(f"taux d'acceptation : {accep_all_chain}")
+    last = chain[-1]
+    print(f"Autocorr à un lag 1 : {autocorr(last[:,0], 1)} et {autocorr(last[:,1], 1)}")
+    print(f'Estimation {elt+1} finie')
+    print('--------------------------------------------------------------')
+    # a = tsaplots.plot_acf(last[:, 0])
+    # a = tsaplots.plot_acf(last[:, 1])
+    # plt.show(block = False)
+    # plt.pause(2)
+    # plt.close()
+    # plt.plot(last[ :, 0], label = r'$X_1$')
+    # plt.legend()
+    # plt.show(block = False)
+    # plt.pause(2)
+    # plt.close()
+    # plt.plot(last[:,  1], label = r'$X_2$')
+    # plt.legend()
+    # plt.show(block = False)
+    # plt.pause(2)
+    # plt.close()
 
-# print(f"Estimation par Vanilla SS est de {(np.array(estimation).mean())}")
-# print(f"Ecart-type de l'estimateur {np.array(estimation).std()}")
+# acceptance = np.array(acceptance)
+cost = np.array(cost)
+estimation = np.array(estimation)
+cov = estimation.std() / estimation.mean()
+Ntot = int(cost.mean())
+Nreq = int((1-Pf)/ (Pf*cov**2)) +1
+
+
+file = 'vanilla_SS/SS_d' + str(d) +'.txt'
+
+with open(file, 'a') as f :
+
+    print('---------------------------------------------------------------', file= f)
+    print('---------------------------------------------------------------', file = f)
+
+
+    print(f'SS avec noyau de proposition gaussien | sd = {sd}', file = f)
+    print('---------------------------------------------------------------', file=f)
+    print(f'dimension d = {d} | Pf_SS = {np.round(estimation.mean(), 8)} | cov(Pf_SS) = {np.round(cov, 8)} | nu = {Nreq /Ntot} | l = {length_chain}', file=f)
+
+    print('---------------------------------------------------------------', file=f)
+    print(f'taux acceptation moyen : {accep_all_chain}', file=f)
+    print('---------------------------------------------------------------', file=f)
 
