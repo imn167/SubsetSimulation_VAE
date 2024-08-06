@@ -4,26 +4,43 @@ import numpy as np
 import scipy.stats as sp 
 import matplotlib.pyplot as plt 
 from statsmodels.graphics import tsaplots
+from collections import deque 
+import time 
 
 # dim = [2,10,20,50,70,100]
-estimation = list()
-CMC = list()
-rv = sp.multivariate_normal()
+estimation = deque()
+CMC = deque()
+cost = deque(())
+rv = sp.multivariate_normal() #proposal Kernel 
+t = 3.5
+pt = 9.3e-4
+sd = .4
+p0 = .25
+d = 50
+chain_length = 4 
+
 for elt in range(100):
     # np.random.seed(123)
-    samples = np.random.normal(size = (10000,50))
+    samples = np.random.normal(size = (10000,d))
     N, d = samples.shape
 
 
     print('------------------------------------------')
     print(f"Taille de l'echantillon {samples.shape}")
     print(f"MC estimation {np.mean(four_branch(samples) > 3.5)}")
-    quantile, chain, acceptance, failure, mean = MMA(samples, four_branch, 3.5, rv, .4, .25)
+    print('-----------------------------------------------------')
+    start = time.time()
+    quantile, chain, acceptance, failure, mean_phi, run = MMA(samples, four_branch, t, rv, sd, chain_length, p0)
+    stop = time.time() - start
+    
+    cost.append((run))
     estimation.append(failure)
-    CMC.append(np.mean(four_branch(samples) > 3.5))
-    print(f"Estimation SS de défaillance {np.round(failure, 5)} et en moyenne {np.round(mean, 5)} et quantile {np.round(quantile, 5)}")
+    CMC.append(np.mean(four_branch(samples) > t))
+    
+    print(f"Estimation SS de défaillance {np.round(failure, 5)} et en moyenne {np.round(mean_phi, 5)} et quantile {np.round(quantile, 5)}")
     acceptance = np.array(acceptance)
-    print(f"Taux d'acceptation en moyenne {np.round(acceptance.mean(axis=1), 5)}")
+    rate = np.round(acceptance.mean(axis=1), 5)
+    print(f"Taux d'acceptation en moyenne {rate}")
 
     # last = chain[-1]
 
@@ -49,7 +66,20 @@ for elt in range(100):
     # plt.pause(2)
     # plt.close()
 
-print(f"Estimation par CMC {np.array(CMC).mean()}")
-print(f"Ecart-type pour CMC {np.array(CMC).std()}")
-print(f"Estimation par MMA est de {(np.array(estimation).mean())}")
-print(f"Ecart-type de l'estimateur {np.array(estimation).std()}")
+estimation = np.array(estimation)
+cost = np.array(cost)
+cov = estimation .std() / estimation.mean()
+Ntot = cost.mean()
+Nreq = (1-pt) / (pt* cov**2)
+
+file = 'MMA_output.txt'
+with open(file, 'a') as f : 
+    print('------------------------------------', file=f)
+    print(f'temps excution {stop}', file=f)
+    print('------------------------------------------', file=f)
+    print(f'MMA avec des noyaux de propositions gaussien | sd = {sd} et probabilité fixe {p0} | taille echantillon {10000}', file=f)
+    print('-----------------------------------------------------------------------------------', file=f)
+    print(f'dimension d = {d} | Pf_MMA = {np.round(estimation.mean())} | cov(Pf_MMA) = {cov} | nu = {Nreq / Ntot} | l = {chain_length}', file=f)
+    print('-----------------------------------------------------------------------------------', file = f)
+    print(f"taux d'acceptation moyen pour chaque evenement  {rate}", file = f)
+    print('-----------------------------------------------------------------', file=f)
