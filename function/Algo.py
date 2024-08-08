@@ -313,7 +313,7 @@ def ss_vae(sample, threshold, phi, level, latent_dim, K_peuso_inputs, N_prior, l
 
         ps_mean, ps_logvar, z, isnan = vae.density_x(N_prior)
         if isnan :
-            break #stopping the excution 
+            return tuple([None]*7) #stopping the excution 
 
         inf_mixture = vae.distrx #openturns Mixture 
         gc.collect()

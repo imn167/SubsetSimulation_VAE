@@ -1,0 +1,112 @@
+\tikzset{arrow/.style={-stealth, thick, draw=gray!80!black}}
+
+\begin{tikzpicture}
+    \def\a{7.5}
+
+    \node[fill=red!20, minimum width=0.5cm, minimum height=1.0cm] (Z) at (0,0) {$\zVec$};
+     
+	\node[fill=white, minimum width=0.5cm, minimum height=4cm] (X) at ($(Z.center) - (\a,0)$)  {$\xVec$};
+	
+	\draw[fill=blue!25] ([xshift=0.5cm]X.north east) 
+    -- ([xshift=3cm,yshift=1.25cm]X.east) 
+    -- ([xshift=4cm,yshift=1.75cm]X.east) 
+    -- ([xshift=4cm,yshift=0.5cm]X.east) 
+    -- ([xshift=3cm,yshift=0cm]X.east) 
+    -- ([xshift=4cm,yshift=-0.5cm]X.east) 
+    -- ([xshift=4cm,yshift=-1.75cm]X.east) 
+    -- ([xshift=3cm,yshift=-1.25cm]X.east) 
+    -- ([xshift=0.5cm]X.south east) 
+    -- cycle; 
+	\node (encoder) at (-0.72*\a,0) {\textsc{Encodeur}};
+
+    \node[fill=green!20, minimum width=0.5cm, minimum height=1.25cm] (muX) at ($(X.east) + (5,1.125)$)  {$\muVec_{\xVec}$};
+
+    \node[fill=green!20, minimum width=0.5cm, minimum height=1.25cm] (sigmaX) at ($(X.east) + (5,-1.125)$)  {$\SigmaVec_{\xVec}$};
+
+    \node[minimum width=0.5cm, minimum height=.5cm] (eps) at ($(Z.center) + (-1.8,0)$)  {$\epsilonVec \sim \mathcal{N}(\zeroVec,\iRandVec_{d_z})$};
+
+    \node[minimum width=0.5cm, minimum height=.5cm] (Xhat) at ($(Z.center) + (7,0)$)  {$\widehat{\xRandVec} \sim \mathcal{N}(\muVec_\zVec,\SigmaVec_\zVec)$};
+	
+	\draw[fill=blue!25] ([xshift=0.5cm]Z.north east) 
+    -- ([xshift=4cm,yshift=2.25cm]Z.east) 
+    -- ([xshift=4cm,yshift=.5cm]Z.east) 
+    -- ([xshift=3cm,yshift=0cm]Z.east)
+    -- ([xshift=4cm,yshift=-.5cm]Z.east)
+    -- ([xshift=4cm,yshift=-2.25cm]Z.east) 
+    -- ([xshift=0.5cm]Z.south east) 
+    -- cycle;
+	\node at ($(Z.center) + (2,0)$) {\textsc{Décodeur}};
+
+     \node[fill=green!20, minimum width=0.5cm, minimum height=1.75cm] (muZ) at ($(Z.east) + (5,1.375)$)  {$\muVec_{\zVec}$};
+
+    \node[fill=green!20, minimum width=0.5cm, minimum height=1.75cm] (sigmaZ) at ($(Z.east) + (5,-1.375)$)  {$\SigmaVec_{\zVec}$};
+
+
+    \draw[arrow] ([xshift=-0.64cm]muX.west) -- (muX.west) ;
+    \draw[arrow] ([xshift=-0.64cm]sigmaX.west) -- (sigmaX.west) ;
+
+    \draw[arrow] ([xshift=-0.64cm]muZ.west) -- (muZ.west) ;
+    \draw[arrow] ([xshift=-0.64cm]sigmaZ.west) -- (sigmaZ.west) ;
+
+    \draw[arrow] (muX.east) |- (muX.east) -| (Z.north);
+    \draw[arrow] (sigmaX.east) |- (sigmaX.east) -| (Z.south);
+
+    \draw[arrow] (muZ.east) |- (muZ.east) -| (Xhat.north);
+    \draw[arrow] (sigmaZ.east) |- (sigmaZ.east) -| (Xhat.south);
+
+	\draw[arrow] (X.east) -- ([xshift=0.5cm]X.east);
+	\draw[arrow] ([xshift=-0.5cm]Z.west) -- (Z.west);
+    \draw[arrow] (eps.east) -- (Z.west);
+	\draw[arrow] (Z.east) -- ([xshift=0.5cm]Z.east);
+
+    \node[anchor=west,fill=purple!40, minimum width=3.5cm, minimum height=1.25cm] (VP) at ($(X.east) + (.5cm,4)$) {$\text{\gls{vp}}_\lambdaVec$};
+    
+    \draw (VP.north east) 
+    -- (VP.north west) 
+    -- (VP.south west) 
+    -- (VP.south east) 
+    -- cycle;
+
+    \node (eK) at ($(VP.north) + (0,1.25)$) {$e_1^K,\dots,e_K^K$};
+
+    \draw[rounded corners=2mm,dashed,line width=1pt] ([xshift=-.2cm,yshift=-.5cm]VP.south west) 
+    -- ([xshift=-.2cm,yshift=2.cm]VP.north west) 
+    -- ([xshift=0.2cm,yshift=2.cm]VP.north east) 
+    -- ([xshift=.2cm,yshift=-.5cm]VP.south east) 
+    -- cycle;
+
+    \node at ($(eK.north) + (0,.75)$) {\textsc{Pseudo-entrées}};
+
+    \draw[arrow] (eK.south) -- (VP.north);
+    \draw[arrow] (VP.south) -- ([yshift=-1.5cm]VP.south);
+
+    \node (muK) at ($(muX.north) + (0.5,3)$)  {$\muVec_k$};
+
+    \node (SigmaK) at ($(muX.north) + (0.5,2)$)  {$\SigmaVec_k$};
+
+
+    \draw[rounded corners=10mm,dashed,fill=purple!40,line width=1pt] ([xshift=-.2cm,yshift=-.5cm]SigmaK.south west) 
+    -- ([xshift=-.2cm,yshift=.5cm]muK.north west) 
+    -- ([xshift=1.45cm,yshift=.5cm]muK.north east) 
+    -- ([xshift=1.45cm,yshift=-.5cm]SigmaK.south east) 
+    -- cycle;
+
+    \node at ($(muX.north) + (0.5,3)$)  {$\muVec_k$};
+
+    \node at ($(muX.north) + (0.5,2)$)  {$\SigmaVec_k$};
+
+    \node (pVP) at ($(SigmaK.east) + (0.75,.5)$)  {$p_{\lambdaVec,\phiVec}^{\text{\gls{vp}}}$};
+
+    \path[thick, purple, ->]
+        ([xshift=-0.64cm]muX.west) edge[out=70, in=175, looseness=.75] node [right] {} (muK.west);
+
+    \path[thick, purple, ->]
+        ([xshift=-0.64cm]sigmaX.west) edge[out=60, in=200, looseness=.75] node [right] {} (SigmaK.west);
+
+    \draw[arrow,line width=1.5] ([xshift=-.08cm]muK.east) -- ([xshift=.08cm]pVP.west);
+    \draw[arrow,line width=1.5] ([xshift=-.08cm]SigmaK.east) -- ([xshift=.08cm]pVP.west);
+
+    \node at ($(muK.north) + (.65,.8)$) {\textsc{VampPrior}};
+
+    
+\end{tikzpicture}

@@ -23,11 +23,11 @@ def MMA(sample, phi, threshold, rv, sd,chain_length,  level):
         
         #MCMC with the modified Metropolis 
 
-        L = np.zeros((6, N, d))
+        L = np.zeros((chain_length, N, d))
         L[0] = sample_threshold
 
         chain_acceptance = np.zeros(N)
-        for i in range(chain_length):
+        for i in range(chain_length-1):
             candidate = np.zeros((N, d))
             for j in range(d):
                 candidate_j = L[i, :, j] + np.random.normal(  scale = sd, size=N)

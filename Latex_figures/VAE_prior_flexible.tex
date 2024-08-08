@@ -1,0 +1,34 @@
+\tikzset{arrow/.style={-stealth}}
+
+
+\begin{tikzpicture}
+
+\node[minimum width=0.5cm, minimum height=1.75cm] (p) at (3.35,4.5) {{\color{purple}{\LARGE{$p$}}}};
+
+\draw[->,ultra thick] (-5,0)--(5,0) node[right]{$z_1$};
+\draw[->,ultra thick] (0,-5)--(0,5) node[above]{$z_2$};
+
+\draw[line width=3pt]  plot[smooth, tension=.9] coordinates {(-.5,2.5) (-2,3) (-3,2.25) (-4.5,2.5) (-4,0) (-3.5,-1) (-3,-1.4) (-2.5,-2) (-3,-3.4)  (-1,-4) (0,-4.5) (1,-4) (2,-3) (3,-2) (4,0) (4.5,.5) (5,2) (4.5,3) (4,4) (2,2) (-.5,2.5)};
+
+\draw[purple,dashed,line width=3pt]  plot[smooth, tension=.9] coordinates {(-.5,2.5) (-1,3.25) (-2,3.75) (-3,3.25) (-3.5,2.25) (-4.5,0) (-4,-1) (-2,-1.5) (-2.5,-3) (-3.5,-4) (-1,-4) (0,-4) (1.75,-4) (2.5,-3) (3,-1) (4.5,0) (4.5,2) (5,3) (4,4.55) (2,1.5) (-.5,2.5)};
+
+\draw[arrow,line width=2pt] (-2,3) -- (-2,3.75);
+\draw[arrow,line width=2pt] (1.5,1.95) -- (1.5,1.35);
+\draw[arrow,line width=2pt] (4.5,3) -- (4.9,3.5);
+\draw[arrow,line width=2pt] (3.3,-1.5) -- (2.85,-1.2);
+\draw[arrow,line width=2pt] (1.5,-3.5) -- (2,-4);
+\draw[arrow,line width=2pt] (-2.55,-1.8) -- (-1.95,-1.5);
+\draw[arrow,line width=2pt] (-4.5,2.5) -- (-3.75,1.75);
+
+\draw[purple,arrow,line width=2pt] (-3,3.25) -- (-2.4,2.7);
+\draw[purple,arrow,line width=2pt] (1.25,1.4) -- (1.25,1.95);
+\draw[purple,arrow,line width=2pt] (4.5,4.6) -- (4.25,4.05);
+\draw[purple,arrow,line width=2pt] (3.,-1) -- (3.45,-1.25);
+\draw[purple,arrow,line width=2pt] (2.25,-3.6) -- (1.85,-3.2);
+\draw[purple,arrow,line width=2pt] (-3.5,-4) -- (-2.5,-3.75);
+\draw[purple,arrow,line width=2pt] (-3.9,1.45) -- (-4.55,2.1);
+
+
+\node[minimum width=0.5cm, minimum height=1.75cm] at (1.75,2.5) {\LARGE{$q_\phiVec$}};
+
+\end{tikzpicture}

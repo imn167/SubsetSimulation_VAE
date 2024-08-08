@@ -19,9 +19,9 @@ def autocorr(x, h):
 
 ## Vanilla Subset Simulation with a  normal proposal kernel with mean the precedent points and variance  
 # d = [2, 10, 20,50,70, 100]
-t = 5
-Pf = 1.5e-6
-sd = .1
+t = 3.5
+Pf = 9.3e-4
+sd = .2
 d= 100
 length_chain = 6
 estimation = deque()
@@ -72,19 +72,22 @@ Ntot = int(cost.mean())
 Nreq = int((1-Pf)/ (Pf*cov**2)) +1
 
 
-file = 'vanilla_SS/SS_d' + str(d) +'.txt'
-
-with open(file, 'a') as f :
-
-    print('---------------------------------------------------------------', file= f)
-    print('---------------------------------------------------------------', file = f)
 
 
-    print(f'SS avec noyau de proposition gaussien | sd = {sd}', file = f)
-    print('---------------------------------------------------------------', file=f)
-    print(f'dimension d = {d} | Pf_SS = {np.round(estimation.mean(), 8)} | cov(Pf_SS) = {np.round(cov, 8)} | nu = {Nreq /Ntot} | l = {length_chain}', file=f)
+file = 'vanilla_SS/SS_d' + str(d) 
+np.save(file, estimation)
 
-    print('---------------------------------------------------------------', file=f)
-    print(f'taux acceptation moyen : {accep_all_chain}', file=f)
-    print('---------------------------------------------------------------', file=f)
+# with open(file, 'a') as f :
+
+#     print('---------------------------------------------------------------', file= f)
+#     print('---------------------------------------------------------------', file = f)
+
+
+#     print(f'SS avec noyau de proposition gaussien | sd = {sd}', file = f)
+#     print('---------------------------------------------------------------', file=f)
+#     print(f'dimension d = {d} | Pf_SS = {np.round(estimation.mean(), 8)} | cov(Pf_SS) = {np.round(cov, 8)} | nu = {Nreq /Ntot} | l = {length_chain}', file=f)
+
+#     print('---------------------------------------------------------------', file=f)
+#     print(f'taux acceptation moyen : {accep_all_chain}', file=f)
+#     print('---------------------------------------------------------------', file=f)
 

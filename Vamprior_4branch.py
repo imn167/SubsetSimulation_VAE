@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 
 
 
-d = 2
-Pf = 9.3e-4
-s = 3.5
+d = 50
+Pf = 1.5e-6
+s = 5
 
 K = 35
 N_prior = 300
@@ -21,14 +21,16 @@ file = 'txtfiles/SSVAE_' + str(d) + '.txt'
 with open(file, 'a') as f :
     cost = deque()
     estimation = deque()
-    for elt in range(1) : 
+    for elt in range(2) : 
         # np.random.seed(123)#fixed seed to compare with other results 
-        samples = np.random.normal(size = (10000, d))
+        samples = np.random.normal(size = (500, d))
         gc.collect()
         N, d = samples.shape
         if elt == 0:
             start = time.time()
             chain , quantile, acceptance_rate, ratio, Pf_SS, k, Ntot = ss_vae(samples, s, four_branch, p0, latent_dim, K, N_prior,length_chain, plot = True, memory = False)
+            if Pf_SS is None :
+                continue
             print('----------------------------------------------------------------------', file= f)
             print('----------------------------------------------------------------------', file= f)
 
@@ -39,6 +41,8 @@ with open(file, 'a') as f :
             # np.savez('Resultats/Dim_' + str(d) , chain, acceptance_rate, ratio)
         else :
             _ , quantile, acceptance_rate, _ , Pf_SS, k, Ntot = ss_vae(samples, s, four_branch, p0, latent_dim, K, N_prior,length_chain, plot = False, memory = False)
+            if Pf_SS is None :
+                continue
                 
         print('---------------------------')
         print(f'Pf_SS {Pf_SS}')

@@ -1,0 +1,23 @@
+\tikzset{arrow/.style={-stealth, thick, draw=gray!80!black}}
+
+
+\begin{tikzpicture}
+
+\filldraw[color=red!5,inner color=red,outer color=red!5](-1.75,-1.75) circle (3);
+\filldraw[color=blue!5,inner color=blue,outer color=blue!5](1.75,1.5) circle (2.5);
+\filldraw[color=green!5,inner color=green,outer color=green!5] (-2,2.5) ellipse (2.5 and 2.25);
+\filldraw[color=yellow!5,inner color=yellow,outer color=yellow!5] (2,-2.5) ellipse (2.5 and 2);
+
+\node[minimum width=0.5cm, minimum height=1.75cm] (1) at (-1.75,-1.75)  {$q_\phiVec\left(\bm{.}\left|\xRandVec^{(1)}\right.\right)$};
+\node[minimum width=0.5cm, minimum height=1.75cm] (2) at (1.75,1.5) {$q_\phiVec\left(\bm{.}\left|\xRandVec^{(2)}\right.\right)$};
+\node[minimum width=0.5cm, minimum height=1.75cm] (3) at (-2,2.5) {$q_\phiVec\left(\bm{.}\left|\xRandVec^{(3)}\right.\right)$};
+\node[minimum width=0.5cm, minimum height=1.75cm] (4) at (2,-2.5) {$q_\phiVec\left(\bm{.}\left|\xRandVec^{(4)}\right.\right)$};
+
+\node[minimum width=0.5cm, minimum height=1.75cm] (p) at (1.5,4.75) {{\color{purple}{\LARGE{$p$}}}};
+
+\draw[purple,dashed,line width=2pt](0,0) circle (4.5);
+
+\draw[->,ultra thick] (-5,0)--(5,0) node[right]{$z_1$};
+\draw[->,ultra thick] (0,-5)--(0,5) node[above]{$z_2$};
+
+\end{tikzpicture}

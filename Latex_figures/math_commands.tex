@@ -1,0 +1,215 @@
+%%%%% NEW MATH DEFINITIONS %%%%%
+
+\usepackage{amsmath,amsfonts,bm,bbold}
+
+% Mark sections of captions for referring to divisions of figures
+\newcommand{\figleft}{{\em (Left)}}
+\newcommand{\figcenter}{{\em (Center)}}
+\newcommand{\figright}{{\em (Right)}}
+\newcommand{\figtop}{{\em (Top)}}
+\newcommand{\figbottom}{{\em (Bottom)}}
+\newcommand{\captiona}{{\em (a)}}
+\newcommand{\captionb}{{\em (b)}}
+\newcommand{\captionc}{{\em (c)}}
+\newcommand{\captiond}{{\em (d)}}
+
+% Highlight a newly defined term
+\newcommand{\newterm}[1]{{\bf #1}}
+
+
+% Figure reference, lower-case.
+\def\figref#1{figure~\ref{#1}}
+% Figure reference, capital. For start of sentence
+\def\Figref#1{Figure~\ref{#1}}
+\def\twofigref#1#2{figures \ref{#1} and \ref{#2}}
+\def\quadfigref#1#2#3#4{figures \ref{#1}, \ref{#2}, \ref{#3} and \ref{#4}}
+% Section reference, lower-case.
+\def\secref#1{section~\ref{#1}}
+% Section reference, capital.
+\def\Secref#1{Section~\ref{#1}}
+% Reference to two sections.
+\def\twoSecrefs#1#2{Sections \ref{#1} and \ref{#2}}
+% Reference to three sections.
+\def\secrefs#1#2#3{sections \ref{#1}, \ref{#2} and \ref{#3}}
+% Reference to an equation, lower-case.
+%\def\eqref#1{équation~(\ref{#1})}
+% Reference to an equation, upper case
+\def\eqref#1{Équation~(\ref{#1})}
+\def\twoeqref#1#2{Équations~(\ref{#1}) et~(\ref{#2})}
+% A raw reference to an equation---avoid using if possible
+\def\plaineqref#1{\ref{#1}}
+% Reference to a chapter, lower-case.
+\def\chapref#1{chapitre~\ref{#1}}
+% Reference to an equation, upper case.
+\def\Chapref#1{Chapitre~\ref{#1}}
+\def\twoChapref#1#2{Chapitres~\ref{#1} et~\ref{#2}}
+% Reference to a range of chapters
+\def\rangechapref#1#2{chapitres\ref{#1}--\ref{#2}}
+% Reference to an algorithm, lower-case.
+\def\algref#1{algorithme~\ref{#1}}
+% Reference to an algorithm, upper case.
+\def\Algref#1{Algorithme~\ref{#1}}
+\def\twoalgref#1#2{algorithmes \ref{#1} and \ref{#2}}
+\def\Twoalgref#1#2{Algorithmes \ref{#1} and \ref{#2}}
+% Reference to a part, lower case
+\def\partref#1{partie~\ref{#1}}
+% Reference to a part, upper case
+\def\Partref#1{Partie~\ref{#1}}
+\def\twopartref#1#2{parties \ref{#1} and \ref{#2}}
+% Example reference, capital.
+\def\Examref#1{Exemple~\ref{#1}}
+% Table reference, capital.
+\def\Tableref#1{Tableau~\ref{#1}}
+% Remarque reference, capital.
+\def\Rmkref#1{Remarque~\ref{#1}}
+\def\Quesref#1{Question~\ref{#1}}
+\def\Thmref#1{Théorème~\ref{#1}}
+
+% Multivariate vectors
+\def\alphaVec{{\bm{\alpha}}}
+\def\betaVec{{\bm{\beta}}}
+\def\lambdaVec{{\bm{\lambda}}}
+\def\muVec{{\bm{\mu}}}
+\def\phiVec{{\bm{\phi}}}
+\def\thetaVec{{\bm{\theta}}}
+\def\SigmaVec{{\bm{\Sigma}}}
+\def\etaVec{{\bm{\eta}}}
+\def\nuVec{{\bm{\nu}}}
+\def\epsilonVec{{\bm{\epsilon}}}
+\def\nuVec{{\bm{\nu}}}
+
+\def\aVec{{\mathbf{a}}}
+\def\bVec{{\mathbf{b}}}
+\def\cVec{{\mathbf{c}}}
+\def\dVec{{\mathbf{d}}}
+\def\eVec{{\mathbf{e}}}
+\def\fVec{{\mathbf{f}}}
+\def\gVec{{\mathbf{g}}}
+\def\hVec{{\mathbf{h}}}
+\def\iVec{{\mathbf{i}}}
+\def\jVec{{\mathbf{j}}}
+\def\kVec{{\mathbf{k}}}
+\def\lVec{{\mathbf{l}}}
+\def\mVec{{\mathbf{m}}}
+\def\nVec{{\mathbf{n}}}
+\def\oVec{{\mathbf{o}}}
+\def\pVec{{\mathbf{p}}}
+\def\qVec{{\mathbf{q}}}
+\def\rVec{{\mathbf{r}}}
+\def\sVec{{\mathbf{s}}}
+\def\tVec{{\mathbf{t}}}
+\def\uVec{{\mathbf{u}}}
+\def\vVec{{\mathbf{v}}}
+\def\wVec{{\mathbf{w}}}
+\def\xVec{{\mathbf{x}}}
+\def\yVec{{\mathbf{y}}}
+\def\zVec{{\mathbf{z}}}
+
+\def\zeroVec{{\bm{0}}}
+\def\oneVec{{\bm{1}}}
+
+% Multivariate random vectors
+\def\aRandVec{{\mathbf{A}}}
+\def\bRandVec{{\mathbf{B}}}
+\def\cRandVec{{\mathbf{C}}}
+\def\dRandVec{{\mathbf{D}}}
+\def\eRandVec{{\mathbf{E}}}
+\def\fRandVec{{\mathbf{F}}}
+\def\gRandVec{{\mathbf{G}}}
+\def\hRandVec{{\mathbf{H}}}
+\def\iRandVec{{\mathbf{I}}}
+\def\jRandVec{{\mathbf{J}}}
+\def\kRandVec{{\mathbf{K}}}
+\def\lRandVec{{\mathbf{L}}}
+\def\mRandVec{{\mathbf{M}}}
+\def\nRandVec{{\mathbf{N}}}
+\def\oRandVec{{\mathbf{O}}}
+\def\pRandVec{{\mathbf{P}}}
+\def\qRandVec{{\mathbf{Q}}}
+\def\rRandVec{{\mathbf{R}}}
+\def\sRandVec{{\mathbf{S}}}
+\def\tRandVec{{\mathbf{T}}}
+\def\uRandVec{{\mathbf{U}}}
+\def\vRandVec{{\mathbf{V}}}
+\def\wRandVec{{\mathbf{W}}}
+\def\xRandVec{{\mathbf{X}}}
+\def\yRandVec{{\mathbf{Y}}}
+\def\zRandVec{{\mathbf{Z}}}
+
+% Operators
+\def\indicator{{\mathbb{1}}}
+\def\P{{\mathbb{P}}}
+\def\E{{\mathbb{E}}}
+\def\V{{\mathbb{V}}}
+\def\Covar{{\mathrm{Cov}}}
+\def\CoV{{\mathrm{CV}}}
+\def\Loi{{\ \overset{\mathscr{L}}{=} \ }}
+\def\inde{{\ \perp\!\!\!\perp \ }}
+\def\fX{{f_{\mathbf{X}}}}
+\def\gX{{g_{\mathbf{X}}}}
+\def\FX{{F_{\mathbf{X}}}}
+\def\gopt{{g_{\text{opt}}}}
+\def\goptIj#1{{g_{\text{opt}}^{#1}}}
+%\def\Tr{{\mathrm{Tr}}}
+
+\newcommand{\Dkl}{D_{\mathrm{KL}}}
+
+\DeclareMathOperator*{\argmax}{arg\,max \ }
+\DeclareMathOperator*{\argmin}{arg\,min \ }
+\def\ceil#1{\lceil #1 \rceil}
+\def\floor#1{\lfloor #1 \rfloor}
+\newcommand{\abs}[1]{\left| #1 \right|}
+
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\Tr}{Tr}
+
+% Sets
+\def\R{{\mathbb{R}}}
+\def\N{{\mathbb{N}}}
+\def\L{{\mathbb{L}}}
+\def\xSet{{\mathcal{X}}}
+\def\dMultiSet{{\mathcal{P}\left(d\right)}}
+\def\dPerm{{\mathcal{S}(d)}}
+\def\emptySet{{\varnothing}}
+\def\failSet{{\mathscr{F}_t}}
+
+
+% Brackets
+\def\intlbracket{{[\![}}
+\def\intrbracket{{]\!]}}
+\newcommand{\smallO}[1]{\ensuremath{\mathop{}\mathopen{}o\mathopen{}\left(#1\right)}}
+
+
+% Estimators
+\def\T{{\text{T-}}}
+\def\iEst{{\widehat{I}}}
+\def\iEstIS{{\widehat{I}^{\text{\gls{is}}}}}
+\def\iEstCV{{\widehat{I}^{\text{\gls{cv}}}}}
+\def\iEstISCV{{\widehat{I}^{\text{\gls{is}-\gls{cv}}}}}
+\def\eEst{{\widehat{\text{E}}}}
+\def\pEst{{\widehat{p}_t}}
+\def\pEstMC{{\widehat{p}_{t,N}^{\text{MC}}}}
+\def\pEstIS{{\widehat{p}_{t,N}^{\text{\gls{is}}}}}
+\def\pEstSS{{\widehat{p}_{t,N}^{\text{\gls{ss}}}}}
+\def\EVuMC{{\widehat{\text{EV}}_{u,\text{MC}}}}
+\def\VEuMC{{\widehat{\text{VE}}_{u,\text{MC}}}}
+\def\EVuPF{{\widehat{\text{EV}}_{u,\text{PF}}}}
+\def\VEuPF{{\widehat{\text{VE}}_{u,\text{PF}}}}
+\def\ShapEst{{\widehat{\text{Sh}}}}
+\def\VEEst{{\widehat{\text{VE}}}}
+
+\def\voisins#1{{\kappa_N^{#1}}}
+%\def\indX#1{\indicator\left(\psi\left(#1\right)>t\right)}
+\def\indX#1{\indicator_\failSet\left(#1\right)}
+
+%Indices
+\def\EVu{{\text{EV}_u}}
+\def\VEu{{\text{VE}_u}}
+\def\Sob{{\text{S}}}
+\def\Shap{{\text{Sh}}}
+
+%Entiers
+\def\Nmax{{N_{\text{max}}}}
+\def\Nfin{{N_{\text{fin}}}}
+\def\Nev{{N_{\text{eval}}}}
+\def\Nrep{{n_{\text{rep}}}}
