@@ -1,13 +1,13 @@
 # SubsetSimulation_VAE
-Innovation for the Subset Simulation Algorithm by adding a proposal kernel based on the VAE
+Enhancement of the Subset Simulation Algorithm by integrating a proposal kernel based on the Variational Autoencoder (VAE)
 
-## Package Version  (python version : 3.11.8)    
+## Package Version (python version: 3.11.8)    
 - tensorflow==2.15.0
 - scipy==1.13.0
 - openturns==1.22
 - numpy==1.26.4
 
-## Three VAE  
+## Three Types of VAE
 - Classical with a gaussian prior
 - Mixture of Gaussians *MoG*
 - Variational Mixture of Posteriors *Vamprior*
@@ -20,23 +20,23 @@ The folder **function** contains
 - Implementation of the Modified Metropolis Algorithm in *MMA.py*
 - Implementation of the M-H algorithms with vae in *Algo.py*
 
-The folder **Exemple_Test** contains the different exemple including the 4-branches.   
+The folder **Exemple_Test** contains several examples, including the 4-branch problem.
 
-The folder **MMA** contains the scripts of MMA for the 4branch exemple.  
+The folder **MMA** contains script for MMA applied to the 4-branch example.
 
-The folder **MoG_VAE** contains the application of the prior MoG with the exemple of the truncated gaussians.  
+The folder **MoG_VAE** demonstrates the application of the Mixture of Gaussians (MoG) prior with truncated Gaussian examples.
 
-The folder **SS_VAEVP** contains the application of the prior Vamprior for the exemple of the truncated gaussians and the application of the algorithm **SS_VAE** on the 4-branches.   
+The folder **SS_VAEVP** includes the application of the Vamprior to truncated Gaussian examples and the implementation of the SS_VAE algorithm on the 4-branch problem. 
 
 -------------------------------------------------------------------------------------
-Only Vamprior were used in the SS algorithm ! (MoG not effecient enough)   
+Only the Vamprior was used in the Subset Simulation algorithm, as the MoG prior was not sufficiently effective.   
 
 You can read the intership report. 
 
 ## Numerical Problems  
-Memory loss while using tensorflow Model with a loop (while, for ...) 
-Nothing changes if we use gc.collect(), del.   
-Tracking the memory during the Subset Simulation algorithm with **memory_profiler**, function profiler.   
+There is a memory leak when using TensorFlow models within loops (while, for, etc.).
+Using `gc.collect()` or `del` does not resolve the issue.
+Memory usage is tracked during the Subset Simulation algorithm with **memory_profiler** and the function profiler. 
 
   
 
