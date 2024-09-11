@@ -1,7 +1,7 @@
 # SubsetSimulation_VAE
 Innovation for the Subset Simulation Algorithm by adding a proposal kernel based on the VAE
 
-## Package Version  (version python : 3.11.8)    
+## Package Version  (python version : 3.11.8)    
 - tensorflow==2.15.0
 - scipy==1.13.0
 - openturns==1.22
